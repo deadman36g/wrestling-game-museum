@@ -103,3 +103,27 @@ public class HarvesterTests
         Assert.DoesNotContain(Path.GetInvalidFileNameChars(), c => key.Contains(c));
     }
 }
+
+public class TitleMatchTests
+{
+    [Theory]
+    [InlineData("WWF WrestleMania 2000", "WWF Wrestlemania 2000", 3)]
+    [InlineData("Shin Nihon Pro Wrestling: Toukon Retsuden Advance", "Shin Nippon Pro Wrestling Toukon Retsuden Advance", 3)]
+    [InlineData("Wrestle Kingdom 2: Pro Wrestling Sekai Taisen", "Wrestle Kingdom 2", 1)]
+    [InlineData("Fire Pro Wrestling 2", "Fire Pro Wrestling", 0)]
+    [InlineData("Fire Pro Wrestling III", "Fire Pro Wrestling", 0)]
+    [InlineData("007: Everything or Nothing", "AEW Casino: Double or Nothing", 0)]
+    public void ScoresTitles(string launchBox, string archive, int expected) =>
+        Assert.Equal(expected, TitleMatch.Score(launchBox, archive));
+
+    [Fact]
+    public void ArchiveTitleComesFromTheBoxImageAltText()
+    {
+        const string html = """
+            <title>WWE 2K23 Release Date, Features {"joomla.jtext":{"X":"y"}}</title><h1>
+            <ul><li class="field-entry"><span class="field-label">Release Date</span><span class="field-value">March 17, 2023</span></li></ul>
+            <img src="a.webp" alt="WWE 2K23 - WWE Games &amp; Wrestling Games Database">
+            """;
+        Assert.Equal("WWE 2K23", SmackdownParser.Parse("wwe-2k23", html)!.Title);
+    }
+}

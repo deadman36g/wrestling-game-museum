@@ -23,6 +23,7 @@ public static partial class SmackdownParser
 {
     [GeneratedRegex(@"<li class=""field-entry[^""]*"">\s*<span class=""field-label\s*"">([^<]*)</span>\s*<span class=""field-value\s*"">(.*?)</span>\s*</li>", RegexOptions.Singleline)]
     private static partial Regex FieldRx();
+    [GeneratedRegex(@"alt=""([^""]+?) - WWE Games (?:&amp;|&) Wrestling Games Database""")] private static partial Regex AltTitleRx();
     [GeneratedRegex("<[^>]+>")] private static partial Regex TagRx();
     [GeneratedRegex(@"<title>(.*?)\s*\|", RegexOptions.Singleline)] private static partial Regex TitleRx();
     [GeneratedRegex(@"<h1[^>]*>\s*(?:<[^>]+>\s*)*([^<]+)", RegexOptions.Singleline)] private static partial Regex H1Rx();
@@ -50,7 +51,9 @@ public static partial class SmackdownParser
             fields.TryAdd(Text(m.Groups[1].Value), m.Groups[2].Value);
         if (fields.Count == 0) return null;
 
-        string title = Text(TitleRx().Match(html) is { Success: true } t ? t.Groups[1].Value : "");
+        // The box image's alt text ("<Title> - WWE Games & Wrestling Games Database") is the clean title; <title> can carry page junk.
+        string title = AltTitleRx().Match(html) is { Success: true } a ? Text(a.Groups[1].Value) : "";
+        if (title.Length == 0) title = Text(TitleRx().Match(html) is { Success: true } t ? t.Groups[1].Value : "");
         if (title.Length == 0 && H1Rx().Match(html) is { Success: true } h) title = Text(h.Groups[1].Value);
         if (title.Length == 0) return null;
 

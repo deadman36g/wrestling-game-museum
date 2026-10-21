@@ -385,6 +385,14 @@
     },
     {
       "slug": "ecw-hardcore-revolution"
+    },
+    {
+      "slug": "virtual-basement-the-wrestling-code",
+      "exclude": true
+    },
+    {
+      "slug": "ultra-pro-wrestling",
+      "exclude": true
     }
   ]
 }

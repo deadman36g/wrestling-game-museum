@@ -92,12 +92,12 @@ async Task<(LaunchBoxResult?, BoxFront?, string)> FindArtAsync(CurationEntry c, 
         try { html = await http.GetStringAsync(LaunchBoxParser.SearchUrl(query), refresh); }
         catch (HttpRequestException ex) { return (null, null, "LaunchBox search failed: " + ex.Message); }
         var results = LaunchBoxParser.ParseSearch(html);
-        string Norm(string s) => new string(s.ToLowerInvariant().Replace("&", "and").Where(char.IsLetterOrDigit).ToArray());
         var platforms = c.Platforms.Count > 0 ? c.Platforms : facts?.Platforms ?? [];
-        // Same-titled entries exist for several platforms: only those on one of the archive's platforms count,
-        // best-ranked (first-listed) platform first.
-        candidates = results.Where(r => (Norm(r.Title) == Norm(query) || Norm(r.Title) == Norm(title)) && PlatformMap.Rank(platforms, r.Platform) >= 0)
-                            .OrderBy(r => PlatformMap.Rank(platforms, r.Platform)).ToList();
+        // Same-titled entries exist for several platforms: only those on one of the archive's platforms count.
+        // Best first: exact title, then close title; within that, the archive's first-listed platform.
+        var scored = results.Select(r => (r, rank: PlatformMap.Rank(platforms, r.Platform), match: TitleMatch.Score(r.Title, title, query)))
+                            .Where(x => x.rank >= 0 && x.match > 0).ToList();
+        candidates = scored.OrderByDescending(x => x.match).ThenBy(x => x.rank).Select(x => x.r).ToList();
         if (candidates.Count == 0)
             return (null, null, "no title+platform match; candidates: " + string.Join(" | ", results.Take(5).Select(r => $"{r.Title} [{r.Platform}] {r.IdSlug}")));
     }
