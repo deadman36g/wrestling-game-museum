@@ -11,13 +11,28 @@ Directory.CreateDirectory(outDir);
 string command = args.Length > 0 ? args[0] : "build";
 bool refresh = args.Contains("--refresh");
 
-CurationFile curation = CurationFile.Load(Path.Combine(root, "data", "curation.json"));
 using var http = new PoliteHttp(cache);
+
+if (command == "list")
+{
+    await ListAsync();
+    return 0;
+}
+
+CurationFile curation = CurationFile.Load(Path.Combine(root, "data", "curation.json"));
 
 var factsBySlug = new Dictionary<string, ArchiveFacts?>();
 var artBySlug = new Dictionary<string, (LaunchBoxResult? Entry, BoxFront? Front, string Note)>();
 
-foreach (CurationEntry c in curation.Games)
+var entries = curation.Games.ToList();
+string slugFile = Path.Combine(root, "data", "slugs.txt");
+if (File.Exists(slugFile))
+    foreach (string slug in File.ReadAllLines(slugFile).Select(l => l.Trim()).Where(l => l.Length > 0))
+        if (entries.All(e => e.Slug != slug)) entries.Add(new CurationEntry { Slug = slug });
+entries.RemoveAll(e => e.Exclude);
+if (args.Contains("--only")) { var only = args[(Array.IndexOf(args, "--only") + 1)..].Where(a => !a.StartsWith("--")).ToHashSet(); entries = entries.Where(e => only.Contains(e.Slug)).ToList(); }
+
+foreach (CurationEntry c in entries)
 {
     Console.WriteLine($"[{c.Slug}]");
     factsBySlug[c.Slug] = await FetchFactsAsync(c);
@@ -27,7 +42,8 @@ foreach (CurationEntry c in curation.Games)
 
 if (command is "build" or "art")
 {
-    var games = curation.Games
+    var games = entries
+        .Where(c => factsBySlug[c.Slug] is not null || c.Title is not null)
         .Select(c => CatalogBuilder.Build(c, factsBySlug[c.Slug], artBySlug[c.Slug].Entry, artBySlug[c.Slug].Front))
         .OrderBy(g => g.FirstDate, StringComparer.Ordinal).ThenBy(g => g.Title, StringComparer.OrdinalIgnoreCase).ToList();
     var catalog = new Catalog { Version = 1, Generated = DateTime.UtcNow.ToString("yyyy-MM-dd"), Games = games };
@@ -65,9 +81,10 @@ async Task<ArchiveFacts?> FetchFactsAsync(CurationEntry c)
 async Task<(LaunchBoxResult?, BoxFront?, string)> FindArtAsync(CurationEntry c, ArchiveFacts? facts)
 {
     string title = c.Title ?? facts?.Title ?? c.Slug;
-    LaunchBoxResult? entry = null;
+    var candidates = new List<LaunchBoxResult>();
+    string note = "";
     if (c.LaunchBoxId.Length > 0)
-        entry = new LaunchBoxResult(c.LaunchBoxId, title, "");
+        candidates.Add(new LaunchBoxResult(c.LaunchBoxId, title, ""));
     else
     {
         string query = c.LaunchBoxQuery.Length > 0 ? c.LaunchBoxQuery : title;
@@ -75,19 +92,28 @@ async Task<(LaunchBoxResult?, BoxFront?, string)> FindArtAsync(CurationEntry c, 
         try { html = await http.GetStringAsync(LaunchBoxParser.SearchUrl(query), refresh); }
         catch (HttpRequestException ex) { return (null, null, "LaunchBox search failed: " + ex.Message); }
         var results = LaunchBoxParser.ParseSearch(html);
-        string Norm(string s) => new string(s.ToLowerInvariant().Where(char.IsLetterOrDigit).ToArray());
-        entry = results.FirstOrDefault(r => Norm(r.Title) == Norm(query));
-        if (entry is null)
-            return (null, null, "no exact title match; candidates: " + string.Join(" | ", results.Take(5).Select(r => $"{r.Title} [{r.Platform}] {r.IdSlug}")));
+        string Norm(string s) => new string(s.ToLowerInvariant().Replace("&", "and").Where(char.IsLetterOrDigit).ToArray());
+        var platforms = c.Platforms.Count > 0 ? c.Platforms : facts?.Platforms ?? [];
+        // Same-titled entries exist for several platforms: only those on one of the archive's platforms count,
+        // best-ranked (first-listed) platform first.
+        candidates = results.Where(r => (Norm(r.Title) == Norm(query) || Norm(r.Title) == Norm(title)) && PlatformMap.Rank(platforms, r.Platform) >= 0)
+                            .OrderBy(r => PlatformMap.Rank(platforms, r.Platform)).ToList();
+        if (candidates.Count == 0)
+            return (null, null, "no title+platform match; candidates: " + string.Join(" | ", results.Take(5).Select(r => $"{r.Title} [{r.Platform}] {r.IdSlug}")));
     }
-    if (c.NoBoxArtReason.Length > 0) return (entry, null, "skipped: " + c.NoBoxArtReason);
-    string imagesHtml = await http.GetStringAsync(entry.ImagesUrl, refresh);
-    var fronts = LaunchBoxParser.ParseFronts(imagesHtml);
-    BoxFront? pick = LaunchBoxParser.PickFront(fronts, c.JapanOnly);
-    if (pick is null)
-        return (entry, null, $"{fronts.Count} box fronts on {entry.IdSlug}, none usable (logo/banner only)");
-    Console.WriteLine($"  art: {pick.Region} {pick.Width}x{pick.Height} ({entry.IdSlug})");
-    return (entry, pick, $"{entry.IdSlug}: {pick.Title}");
+    if (c.NoBoxArtReason.Length > 0) return (candidates[0], null, "skipped: " + c.NoBoxArtReason);
+    foreach (LaunchBoxResult entry in candidates)
+    {
+        var fronts = LaunchBoxParser.ParseFronts(await http.GetStringAsync(entry.ImagesUrl, refresh));
+        BoxFront? pick = LaunchBoxParser.PickFront(fronts, c.JapanOnly);
+        if (pick is not null)
+        {
+            Console.WriteLine($"  art: {pick.Region} {pick.Width}x{pick.Height} ({entry.IdSlug})");
+            return (entry, pick, $"{entry.IdSlug} [{entry.Platform}]: {pick.Title}");
+        }
+        note += $"{fronts.Count} fronts on {entry.IdSlug}, none usable; ";
+    }
+    return (candidates[0], null, note);
 }
 
 void WriteContactSheet(Dictionary<string, (LaunchBoxResult? Entry, BoxFront? Front, string Note)> art,
@@ -105,6 +131,41 @@ void WriteContactSheet(Dictionary<string, (LaunchBoxResult? Entry, BoxFront? Fro
         sb.Append($"<figcaption>{System.Net.WebUtility.HtmlEncode(facts[slug]?.Title ?? slug)}<br>{v.Front?.Region}</figcaption></figure>");
     }
     File.WriteAllText(path, sb + "</div>");
+}
+
+// Finds every game page on the archive: the sitemap and a probe list seed a crawl that follows the
+// /games/<slug> links on each game page. A slug only counts if its page has the labelled game fields.
+async Task ListAsync()
+{
+    var queue = new Queue<string>();
+    var seen = new HashSet<string>();
+    void Add(string slug)
+    {
+        if (slug.Length > 0 && seen.Add(slug)) queue.Enqueue(slug);
+    }
+    foreach (string file in new[] { Path.Combine(root, "tools", "slugs-sitemap.txt"), Path.Combine(root, "data", "extra-slugs.txt"), Path.Combine(root, "data", "slugs.txt") })
+        if (File.Exists(file)) foreach (string line in File.ReadAllLines(file)) Add(line.Trim());
+
+    var games = new SortedDictionary<string, string>();
+    var linkRx = new System.Text.RegularExpressions.Regex(@"href=""(?:https://www\.thesmackdownhotel\.com)?/games/([a-z0-9-]+)[""#/]");
+    string[] notGames = ["arenas", "championships", "page-2", "page-3", "page-5"];
+    int visited = 0;
+    while (queue.Count > 0)
+    {
+        string slug = queue.Dequeue();
+        if (notGames.Contains(slug)) continue;
+        visited++;
+        string html;
+        try { html = await http.GetStringAsync("https://www.thesmackdownhotel.com/games/" + slug, refresh); }
+        catch (HttpRequestException) { continue; }
+        ArchiveFacts? facts = SmackdownParser.Parse(slug, html);
+        if (facts is null) continue;
+        games[slug] = facts.Title;
+        foreach (System.Text.RegularExpressions.Match m in linkRx.Matches(html)) Add(m.Groups[1].Value);
+        if (visited % 25 == 0) Console.WriteLine($"  visited {visited}, games {games.Count}, queue {queue.Count}");
+    }
+    File.WriteAllLines(Path.Combine(root, "data", "slugs.txt"), games.Keys);
+    Console.WriteLine($"Found {games.Count} game pages ({visited} slugs tried). Wrote data/slugs.txt");
 }
 
 static string FindRoot()

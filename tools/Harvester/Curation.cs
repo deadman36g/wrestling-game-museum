@@ -13,6 +13,8 @@ public sealed record CurationEntry
     public string LaunchBoxQuery { get; init; } = "";
     /// <summary>Pins the LaunchBox entry ("28949-super-fire-pro-wrestling-x") when the search would pick the wrong one.</summary>
     public string LaunchBoxId { get; init; } = "";
+    /// <summary>Drops an archive page that is not a pro-wrestling game for this museum.</summary>
+    public bool Exclude { get; init; }
     public bool JapanOnly { get; init; }
     /// <summary>Set when the only art on LaunchBox is a logo/banner that slipped past the shape check; the tile shows a placeholder.</summary>
     public string NoBoxArtReason { get; init; } = "";
