@@ -1,0 +1,7 @@
+bin/
+obj/
+.vs/
+*.user
+# Raw downloaded pages and contact sheets from the harvester
+tools/cache/
+tools/out/

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>WrestlingGameMuseum</AssemblyName>
+    <RootNamespace>WrestlingGameMuseum</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="WPF-UI" Version="4.0.3" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WrestlingGameMuseum.Core\WrestlingGameMuseum.Core.csproj" />
+    <!-- The catalog (facts and links only, never artwork) ships next to the exe. -->
+    <Content Include="..\..\data\games.json" Link="data\games.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

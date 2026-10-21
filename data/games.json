@@ -1,0 +1,1652 @@
+{
+  "version": 1,
+  "generated": "2026-10-21",
+  "games": [
+    {
+      "id": "fire-pro-wrestling-combination-tag",
+      "title": "Fire Pro Wrestling Combination Tag",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "1989-06-22",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "TurboGrafx-16 (PC Engine)"
+      ],
+      "developer": "Human Entertainment",
+      "publisher": "Human Entertainment",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Wrestling",
+      "significance": "The starting bell: singles, tags and five-on-five elimination contests.",
+      "history": "The original Human Entertainment Fire Pro game established a Japanese wrestling series built around fictionalized versions of real wrestlers.",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/37a1e54f-ae37-4d83-bb93-f5f4b005fefd.jpg",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/31815-fire-pro-wrestling-combination-tag",
+        "credit": "LaunchBox Games Database",
+        "width": 818,
+        "height": 788
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "https://gamefaqs.gamespot.com/tg16/588971-fire-prowrestling-combination-tag/faqs/10962",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/fire-pro-wrestling-combination-tag",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/31815-fire-pro-wrestling-combination-tag",
+          "facts": "Fire Pro Wrestling: Combination Tag - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "fire-pro-wrestling-2nd-bout",
+      "title": "Fire Pro Wrestling 2nd Bout",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "1991-08-30",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "TurboGrafx-16 (PC Engine)"
+      ],
+      "developer": "Human Entertainment",
+      "publisher": "Human Entertainment",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Wrestling",
+      "significance": "Expands the foundation laid by Combination Tag.",
+      "history": "A PC Engine follow-up with more wrestlers and championship, tournament and elimination options.",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/63d5bbbf-ffe9-4cf9-823d-f563b86ae6c8.jpg",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/31816-fire-pro-wrestling-2nd-bout",
+        "credit": "LaunchBox Games Database",
+        "width": 868,
+        "height": 834
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/fire-pro-wrestling-2nd-bout",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/31816-fire-pro-wrestling-2nd-bout",
+          "facts": "Fire Pro Wrestling: 2nd Bout - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "super-fire-pro-wrestling",
+      "title": "Super Fire Pro Wrestling",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "1991-12-20",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "Super NES"
+      ],
+      "developer": "Human Entertainment",
+      "publisher": "Human Entertainment",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Wrestling",
+      "significance": "Fire Pro\u0027s first major Super Famicom milestone.",
+      "history": "The series moved into the 16-bit Super Famicom era with a bigger presentation and an evolving roster.",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/51f0b183-40fe-4f8f-b205-a9742aa9f40b.png",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/28944-super-fire-pro-wrestling",
+        "credit": "LaunchBox Games Database",
+        "width": 1321,
+        "height": 2400
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/super-fire-pro-wrestling",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/28944-super-fire-pro-wrestling",
+          "facts": "Super Fire Pro Wrestling - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "thunder-pro-wrestling-retsuden",
+      "title": "Thunder Pro Wrestling Retsuden",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "1992-03-27",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "SEGA Genesis"
+      ],
+      "developer": "Human Entertainment",
+      "publisher": "Human Entertainment",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Wrestling",
+      "significance": "",
+      "history": "",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/1e948df7-3fca-4d0b-8147-b51fd88fb795.jpg",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/33702-thunder-pro-wrestling-retsuden",
+        "credit": "LaunchBox Games Database",
+        "width": 1435,
+        "height": 2020
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/thunder-pro-wrestling-retsuden",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/33702-thunder-pro-wrestling-retsuden",
+          "facts": "Thunder Pro Wrestling Retsuden - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "fire-pro-wrestling-3-legend-bout",
+      "title": "Fire Pro Wrestling 3: Legend Bout",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "1992-11-13",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "TurboGrafx-16 (PC Engine)"
+      ],
+      "developer": "Human Entertainment",
+      "publisher": "Human Entertainment",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Wrestling",
+      "significance": "One of the final original PC Engine milestones.",
+      "history": "The PC Engine branch grew to 32 challengers, including singles, tag and handicap exhibition matches.",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/00817f4c-2995-40b7-bec4-610830e5fafb.jpg",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/31817-fire-pro-wrestling-3-legend-bout",
+        "credit": "LaunchBox Games Database",
+        "width": 1422,
+        "height": 1418
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/fire-pro-wrestling-3-legend-bout",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/31817-fire-pro-wrestling-3-legend-bout",
+          "facts": "Fire Pro Wrestling 3: Legend Bout - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "super-fire-pro-wrestling-2",
+      "title": "Super Fire Pro Wrestling 2",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "1992-12-25",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "Super NES"
+      ],
+      "developer": "Human Entertainment",
+      "publisher": "Human Entertainment",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Wrestling",
+      "significance": "A bridge between the original Super game and Final Bout.",
+      "history": "A follow-up to the first Super Famicom entry, continuing the series\u0027 rapid 16-bit development.",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/205884a9-45a0-49d6-b4fd-812a5688266e.jpg",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/28946-super-fire-pro-wrestling-2",
+        "credit": "LaunchBox Games Database",
+        "width": 1210,
+        "height": 2228
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/super-fire-pro-wrestling-2",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/28946-super-fire-pro-wrestling-2",
+          "facts": "Super Fire Pro Wrestling 2 - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "super-fire-pro-wrestling-iii-final-bout",
+      "title": "Super Fire Pro Wrestling III: Final Bout",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "1993-12-28",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "Super NES"
+      ],
+      "developer": "Human Entertainment",
+      "publisher": "Human Entertainment",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Wrestling",
+      "significance": "A pivotal step for the expanding wrestler roster and Edit feature.",
+      "history": "A larger 16-bit entry notable for its 64 playable wrestlers, wrestler editing and new battle royal options.",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/63f1e023-6a91-4446-929c-213778852ce3.jpg",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/28947-super-fire-pro-wrestling-iii-final-bout",
+        "credit": "LaunchBox Games Database",
+        "width": 1200,
+        "height": 2230
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/super-fire-pro-wrestling-iii-final-bout",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/28947-super-fire-pro-wrestling-iii-final-bout",
+          "facts": "Super Fire Pro Wrestling III: Final Bout - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "fire-pro-joshi-all-star-dream-slam",
+      "title": "Fire Pro Joshi: All-Star Dream Slam",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "1994-07-22",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "Super NES"
+      ],
+      "developer": "Human Entertainment",
+      "publisher": "Human Entertainment",
+      "promotions": [
+        "All Japan Women\u0027s Pro-Wrestling"
+      ],
+      "series": "Fire Pro Joshi",
+      "significance": "A full joshi-focused sibling rather than a reskin of the main Fire Pro roster.",
+      "history": "Released July 22, 1994, this women\u0027s wrestling entry focuses on the stars and rivalries of Japan\u0027s joshi promotions. It takes Fire Pro\u0027s deliberate grappling rhythm into a dedicated all-women roster rather than treating women\u0027s wrestling as a small addition to the main game.",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/fa82f9e8-0105-4a84-9c6d-e77667ea80e7.png",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/28932-fire-pro-joshi-all-star-dream-slam",
+        "credit": "LaunchBox Games Database",
+        "width": 797,
+        "height": 1500
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/fire-pro-joshi-all-star-dream-slam",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/28932-fire-pro-joshi-all-star-dream-slam",
+          "facts": "Fire Pro Joshi: All Star Dream Slam - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "fire-pro-gaiden-blazing-tornado",
+      "title": "Fire Pro Gaiden: Blazing Tornado",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "1994-08-25",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "SEGA Saturn",
+        "Arcade"
+      ],
+      "developer": "Human Entertainment",
+      "publisher": "Human Entertainment",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Gaiden",
+      "significance": "The arcade cousin of Fire Pro\u2014and a bridge to Super Fire Pro Wrestling X.",
+      "history": "The faster, more arcade-oriented branch of Human Entertainment\u0027s wrestling family debuted in arcades on August 25, 1994, with distinctive fictional wrestlers and a more colorful presentation. Several of its wrestlers later appeared as recognizable crossovers in Fire Pro Wrestling X.",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/r2_49a0e0ae-42c8-4311-b9c5-6b83331d0d09.png",
+        "region": "United States",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/27163-blazing-tornado",
+        "credit": "LaunchBox Games Database",
+        "width": 1096,
+        "height": 1435
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/fire-pro-gaiden-blazing-tornado",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/27163-blazing-tornado",
+          "facts": "Blazing Tornado - Fanart - Box - Front Image (United States)"
+        }
+      ]
+    },
+    {
+      "id": "super-fire-pro-wrestling-special",
+      "title": "Super Fire Pro Wrestling Special",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "1994-12-22",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "Super NES"
+      ],
+      "developer": "Human Entertainment",
+      "publisher": "Human Entertainment",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Wrestling",
+      "significance": "A distinctive story-mode experiment in the 16-bit series.",
+      "history": "A Super Famicom entry remembered for its unusual story campaign and further refinement of the Fire Pro formula.",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/6fefbc22-2a71-478a-ad99-79fb334dce29.png",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/28948-super-fire-pro-wrestling-special",
+        "credit": "LaunchBox Games Database",
+        "width": 1233,
+        "height": 2237
+      },
+      "regional": [],
+      "screenshots": [
+        {
+          "title": "Super Fire Pro Wrestling Special \u2014 ring action",
+          "sourceUrl": "https://kotaku.com/games/super-fire-pro-wrestling-special/gallery/1",
+          "thumbnailUrl": "https://kotaku.com/igdb/image/upload/t_original/scp8hu.jpg",
+          "credit": "Kotaku / Human Entertainment"
+        },
+        {
+          "title": "Super Fire Pro Wrestling Special \u2014 Gruesome Fighting",
+          "sourceUrl": "https://kotaku.com/games/super-fire-pro-wrestling-special/gallery/2",
+          "thumbnailUrl": "https://kotaku.com/igdb/image/upload/t_original/scp8hv.jpg",
+          "credit": "Kotaku / Human Entertainment"
+        }
+      ],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/super-fire-pro-wrestling-special",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/28948-super-fire-pro-wrestling-special",
+          "facts": "Super Fire Pro Wrestling Special - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "super-fire-pro-wrestling-queen-s-special",
+      "title": "Super Fire Pro Wrestling: Queen\u0027s Special",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "1995-06-30",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "Super NES"
+      ],
+      "developer": "Human Entertainment",
+      "publisher": "Human Entertainment",
+      "promotions": [
+        "All Japan Women\u0027s Pro-Wrestling"
+      ],
+      "series": "Fire Pro Joshi",
+      "significance": "A distinctly women-focused late-16-bit entry from the creators of Fire Pro.",
+      "history": "Released June 30, 1995, Queen\u0027s Special expanded Human\u0027s focus on Japanese women\u0027s professional wrestling. Its separate joshi-centered identity makes it an important part of the Fire Pro family alongside the better-known mixed and men\u0027s rosters.",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/51054e5b-ed62-4348-8dcb-932c676b0b82.jpg",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/28943-super-fire-pro-wrestling-queens-special",
+        "credit": "LaunchBox Games Database",
+        "width": 1207,
+        "height": 2228
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/super-fire-pro-wrestling-queen-s-special",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/28943-super-fire-pro-wrestling-queens-special",
+          "facts": "Super Fire Pro Wrestling: Queen\u0027s Special - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "super-fire-pro-wrestling-x",
+      "title": "Super Fire Pro Wrestling X",
+      "alternateTitles": [
+        "Super Fire Pro Wrestling X Premium"
+      ],
+      "releases": [
+        {
+          "region": "",
+          "date": "1995-12-22",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "Super NES"
+      ],
+      "developer": "Human Entertainment",
+      "publisher": "Human Entertainment",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Wrestling",
+      "significance": "A major late-generation 16-bit milestone, followed by X Premium in March 1996.",
+      "history": "Released in Japan on December 22, 1995 by Human Entertainment, Super Fire Pro Wrestling X brought one of the most ambitious sprite-based wrestling rosters to the Super Famicom. Its timed grapples and wide range of Japanese and American wrestling styles were complemented by tournaments, leagues, championship pursuits, four-person battle royals and wrestler editing. It also brought characters from the Blazing Tornado arcade branch into the main Fire Pro world.",
+      "features": "Play singles, tag matches, one-night dream matches, leagues, elimination contests and a four-wrestler battle royal. Edit mode lets you create wrestlers with individual moves, appearance and skills.",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/3e1bd06c-257d-493a-abe3-333d912ea50a.jpg",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/28949-super-fire-pro-wrestling-x",
+        "credit": "LaunchBox Games Database",
+        "width": 2419,
+        "height": 4437
+      },
+      "regional": [],
+      "screenshots": [
+        {
+          "title": "Gameplay",
+          "sourceUrl": "https://images.launchbox-app.com/2cc5f967-a8f2-4764-94de-85aa7c031441.png",
+          "thumbnailUrl": "https://images.launchbox-app.com/2cc5f967-a8f2-4764-94de-85aa7c031441.png",
+          "credit": "LaunchBox Games Database"
+        },
+        {
+          "title": "Title screen",
+          "sourceUrl": "https://images.launchbox-app.com/1a37e7bc-8ecf-4177-b6b5-229d2a93bccd.png",
+          "thumbnailUrl": "https://images.launchbox-app.com/1a37e7bc-8ecf-4177-b6b5-229d2a93bccd.png",
+          "credit": "LaunchBox Games Database"
+        }
+      ],
+      "videos": [
+        {
+          "title": "Gameplay",
+          "sourceUrl": "https://www.youtube.com/watch?v=PnVz50Ops0A",
+          "thumbnailUrl": "https://img.youtube.com/vi/PnVz50Ops0A/hqdefault.jpg",
+          "credit": "ShiryuGL / YouTube"
+        }
+      ],
+      "rosterSourceUrl": "https://www.thesmackdownhotel.com/games/super-fire-pro-wrestling-x",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/super-fire-pro-wrestling-x",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/28949-super-fire-pro-wrestling-x",
+          "facts": "Super Fire Pro Wrestling X - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "fire-pro-wrestling-iron-slam-96",
+      "title": "Fire Pro Wrestling Iron Slam \u002796",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "1996-03-15",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "PlayStation 1"
+      ],
+      "developer": "Human Entertainment",
+      "publisher": "Human Entertainment",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Wrestling",
+      "significance": "An experimental 3D branch of the Fire Pro family.",
+      "history": "An early polygonal experiment on PlayStation, quite different visually from Fire Pro\u0027s familiar sprites.",
+      "features": "",
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/fire-pro-wrestling-iron-slam-96",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        }
+      ]
+    },
+    {
+      "id": "power-move-pro-wrestling",
+      "title": "Power Move Pro Wrestling",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "1996-11-14",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "PlayStation 1"
+      ],
+      "developer": "Yuke\u0027s",
+      "publisher": "Activision",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "",
+      "significance": "",
+      "history": "",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/84f31c92-1428-4ccb-beed-918462a67885.jpg",
+        "region": "North America",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/28040-power-move-pro-wrestling",
+        "credit": "LaunchBox Games Database",
+        "width": 640,
+        "height": 633
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/power-move-pro-wrestling",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/28040-power-move-pro-wrestling",
+          "facts": "Power Move Pro Wrestling - Box - Front Image (North America)"
+        }
+      ]
+    },
+    {
+      "id": "fire-pro-wrestling-s-6-men-scramble",
+      "title": "Fire Prowrestling S: 6Men Scramble",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "1996-12-27",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "SEGA Saturn"
+      ],
+      "developer": "Human Entertainment",
+      "publisher": "Human Entertainment",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Wrestling",
+      "significance": "A memorable multi-person Saturn outing.",
+      "history": "Six wrestlers could appear at once in the Saturn installment, alongside six-man tags and a large roster.",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/r2_285b3e38-a437-4dd7-a7ef-c4818f77728f.jpg",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/32771-fire-pro-wrestling-s-6men-scramble",
+        "credit": "LaunchBox Games Database",
+        "width": 1400,
+        "height": 1400
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/fire-pro-wrestling-s-6-men-scramble",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/32771-fire-pro-wrestling-s-6men-scramble",
+          "facts": "Fire Pro Wrestling S: 6Men Scramble - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "wcw-vs-the-world",
+      "title": "WCW vs. the World",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "1997-02-28",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "PlayStation 1"
+      ],
+      "developer": "AKI Corporation, Asmik Ace Entertainment",
+      "publisher": "Asmik Ace Entertainment",
+      "promotions": [
+        "World Championship Wrestling"
+      ],
+      "series": "WCW Games",
+      "significance": "",
+      "history": "",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/02c4f1a8-18a3-43cc-815f-321e3c43d74b.jpg",
+        "region": "North America",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/21761-wcw-vs-the-world",
+        "credit": "LaunchBox Games Database",
+        "width": 1402,
+        "height": 1405
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/wcw-vs-the-world",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/21761-wcw-vs-the-world",
+          "facts": "WCW vs. the World - Box - Front Image (North America)"
+        }
+      ]
+    },
+    {
+      "id": "wcw-nwo-revenge",
+      "title": "WCW/nWo Revenge",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "1998-10-26",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "Nintendo 64"
+      ],
+      "developer": "AKI Corporation, Asmik Ace Entertainment",
+      "publisher": "THQ",
+      "promotions": [
+        "World Championship Wrestling"
+      ],
+      "series": "WCW Games",
+      "significance": "",
+      "history": "",
+      "features": "",
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/wcw-nwo-revenge",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        }
+      ]
+    },
+    {
+      "id": "fire-pro-wrestling-g",
+      "title": "Fire Pro Wrestling G",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "1999-06-24",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "PlayStation 1"
+      ],
+      "developer": "S-Neo",
+      "publisher": "Human Entertainment",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Wrestling",
+      "significance": "A late-1990s console milestone discussed in the official World developer retrospective.",
+      "history": "The PlayStation title occupies an important point between Human-era Fire Pro and the Spike-produced games.",
+      "features": "Late PlayStation-era Fire Pro; connects the 16-bit era to the Dreamcast and PS2 period.",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/34d6a916-547c-4100-b47b-201c1c30a572.jpg",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/32033-fire-pro-wrestling-g",
+        "credit": "LaunchBox Games Database",
+        "width": 640,
+        "height": 640
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/fire-pro-wrestling-g",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "Spike Chunsoft developer retrospective",
+          "url": "https://spike-chunsoft.com/FPWW/special.html",
+          "facts": ""
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/32033-fire-pro-wrestling-g",
+          "facts": "Fire Pro Wrestling G - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "virtual-pro-wrestling-2",
+      "title": "Virtual Pro Wrestling 2",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "2000-01-28",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "Nintendo 64"
+      ],
+      "developer": "AKI Corporation",
+      "publisher": "Asmik Ace Entertainment",
+      "promotions": [
+        "All Japan Pro Wrestling",
+        "New Japan Pro Wrestling",
+        "Frontier Martial-Arts Wrestling",
+        "Independent Circuit"
+      ],
+      "series": "",
+      "significance": "",
+      "history": "",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/1cb741ab-e256-41e2-838d-6e036558837d.jpg",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/31028-virtual-pro-wrestling-2-oudou-keishou",
+        "credit": "LaunchBox Games Database",
+        "width": 1600,
+        "height": 2240
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/virtual-pro-wrestling-2",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/31028-virtual-pro-wrestling-2-oudou-keishou",
+          "facts": "Virtual Pro Wrestling 2: Oudou Keishou - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "ecw-hardcore-revolution",
+      "title": "ECW Hardcore Revolution",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "2000-02-01",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "PlayStation 1",
+        "Game Boy Color",
+        "Dreamcast",
+        "Nintendo 64"
+      ],
+      "developer": "Sculptured Software",
+      "publisher": "Asmik Ace Entertainment",
+      "promotions": [
+        "Extreme Championship Wrestling"
+      ],
+      "series": "ECW Games",
+      "significance": "",
+      "history": "",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/f41c5c69-8e8f-40d1-be9c-3e818bc00694.jpg",
+        "region": "North America",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/29308-ecw-hardcore-revolution",
+        "credit": "LaunchBox Games Database",
+        "width": 1413,
+        "height": 1395
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/ecw-hardcore-revolution",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/29308-ecw-hardcore-revolution",
+          "facts": "ECW Hardcore Revolution - Box - Front Image (North America)"
+        }
+      ]
+    },
+    {
+      "id": "fire-pro-wrestling-d",
+      "title": "Fire Pro Wrestling D",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "2001-03-01",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "Dreamcast"
+      ],
+      "developer": "S-Neo",
+      "publisher": "Spike Chunsoft",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Wrestling",
+      "significance": "A substantial Dreamcast home for Fire Pro creation.",
+      "history": "The Dreamcast installment extended the classic presentation and edit tools to wrestlers, referees, organizations and rings.",
+      "features": "Includes wrestler, referee, ring and organization editing in the Dreamcast entry.",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/9bce6d19-89dc-4a6e-8479-c910b6f889e2.jpg",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/30306-fire-pro-wrestling-d",
+        "credit": "LaunchBox Games Database",
+        "width": 2114,
+        "height": 2115
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [
+        {
+          "title": "Fire Pro Wrestling D gameplay (Dreamcast)",
+          "sourceUrl": "https://www.youtube.com/watch?v=wd5tofgZLPs",
+          "thumbnailUrl": "https://img.youtube.com/vi/wd5tofgZLPs/hqdefault.jpg",
+          "credit": "VideoGaming4U / YouTube"
+        }
+      ],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/fire-pro-wrestling-d",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "MobyGames game catalog",
+          "url": "https://www.mobygames.com/game/21074/fire-pro-wrestling-d/",
+          "facts": ""
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/30306-fire-pro-wrestling-d",
+          "facts": "Fire Pro Wrestling D - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "fire-pro-wrestling",
+      "title": "Fire Pro Wrestling",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "2001-03-21",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "Game Boy Advance"
+      ],
+      "developer": "Spike Chunsoft",
+      "publisher": "BAM! Entertainment",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Wrestling",
+      "significance": "The handheld entry that introduced Fire Pro to many players outside Japan.",
+      "history": "The WonderSwan version began in 2000; a Game Boy Advance edition became Fire Pro\u0027s first official North American release in 2001.",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/8117360d-8467-49b2-9355-9d0e002fe44b.jpg",
+        "region": "North America",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/3261-fire-pro-wrestling",
+        "credit": "LaunchBox Games Database",
+        "width": 1530,
+        "height": 1370
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/fire-pro-wrestling",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "MobyGames game catalog",
+          "url": "https://www.mobygames.com/game/30379/fire-pro-wrestling/",
+          "facts": ""
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/3261-fire-pro-wrestling",
+          "facts": "Fire Pro Wrestling - Box - Front Image (North America)"
+        }
+      ]
+    },
+    {
+      "id": "fire-pro-wrestling-2",
+      "title": "Fire Pro Wrestling 2",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "2002-07-19",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "Game Boy Advance"
+      ],
+      "developer": "Spike Chunsoft",
+      "publisher": "BAM! Entertainment",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Wrestling",
+      "significance": "Continues Fire Pro\u0027s portable international expansion.",
+      "history": "The second officially English-language Game Boy Advance release followed the first handheld Fire Pro.",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/5f35c72f-c55b-4456-bf67-6a935a7aa56b.jpg",
+        "region": "North America",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/13788-fire-pro-wrestling-2",
+        "credit": "LaunchBox Games Database",
+        "width": 500,
+        "height": 500
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/fire-pro-wrestling-2",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/13788-fire-pro-wrestling-2",
+          "facts": "Fire Pro Wrestling 2 - Box - Front Image (North America)"
+        }
+      ]
+    },
+    {
+      "id": "king-of-colosseum-red",
+      "title": "King of Colosseum Red",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "2002-12-19",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "PlayStation 2"
+      ],
+      "developer": "Spike Chunsoft",
+      "publisher": "Spike Chunsoft",
+      "promotions": [
+        "New Japan Pro Wrestling",
+        "All Japan Pro Wrestling"
+      ],
+      "series": "King of Colosseum",
+      "significance": "Its wrestlers can be carried into Green and combined for a much larger roster.",
+      "history": "The Red disc focuses on New Japan, All Japan and Pancrase, and features 96 characters alongside a trial-mode progression system.",
+      "features": "Trial mode has season-like progression and unlockable wrestlers, rings and championships. The Red disc emphasizes NJPW, AJPW and Pancrase.",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/d842a268-9141-4978-9a9e-3d5d230847c1.jpg",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/163524-king-of-colosseum-shin-nippon-x-zen-nippon-x-pancrase",
+        "credit": "LaunchBox Games Database",
+        "width": 500,
+        "height": 706
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [
+        {
+          "title": "King of Colosseum Red footage (series retrospective, Red segment)",
+          "sourceUrl": "https://www.youtube.com/watch?v=yEza3Zsltb0\u0026t=8s",
+          "thumbnailUrl": "https://img.youtube.com/vi/yEza3Zsltb0/hqdefault.jpg",
+          "credit": "Jumpers 1998 / YouTube"
+        }
+      ],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/king-of-colosseum-red",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/163524-king-of-colosseum-shin-nippon-x-zen-nippon-x-pancrase",
+          "facts": "King of Colosseum: Shin Nippon x Zen Nippon x Pancrase - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "king-of-colosseum-green",
+      "title": "King of Colosseum Green",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "2003-03-06",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "PlayStation 2"
+      ],
+      "developer": "Spike Chunsoft",
+      "publisher": "Spike Chunsoft",
+      "promotions": [
+        "Pro Wrestling NOAH",
+        "Pro Wrestling ZERO-ONE"
+      ],
+      "series": "King of Colosseum",
+      "significance": "A complementary companion disc that expands the promotions and gameplay options of Red.",
+      "history": "The Green disc centers on NOAH and Zero-One and adds 58 wrestlers; combined Red/Green save content can reach 154 characters.",
+      "features": "NOAH and Zero-One headline this disc. Its Trial mode unlocks more wrestlers, edits, championships and other content.",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/5d8c538e-ee5c-419b-bffa-2a90211cfc1c.jpg",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/163525-king-of-colosseum-noah-x-zero-one",
+        "credit": "LaunchBox Games Database",
+        "width": 500,
+        "height": 707
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [
+        {
+          "title": "King of Colosseum Green footage (series retrospective, Green segment)",
+          "sourceUrl": "https://www.youtube.com/watch?v=yEza3Zsltb0\u0026t=70s",
+          "thumbnailUrl": "https://img.youtube.com/vi/yEza3Zsltb0/hqdefault.jpg",
+          "credit": "Jumpers 1998 / YouTube"
+        }
+      ],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/king-of-colosseum-green",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/163525-king-of-colosseum-noah-x-zero-one",
+          "facts": "King of Colosseum: NOAH x Zero-One - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "fire-pro-wrestling-z",
+      "title": "Fire Pro Wrestling Z",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "2003-06-05",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "PlayStation 2"
+      ],
+      "developer": "Spike Chunsoft",
+      "publisher": "Spike Chunsoft",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Wrestling",
+      "significance": "One of the last major entries before Returns.",
+      "history": "A PlayStation 2 entry with a large move library and a team-centered story/career-style campaign.",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/c01380ba-bb25-435e-9f79-d6feacf703a4.jpg",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/134644-fire-pro-wrestling-z",
+        "credit": "LaunchBox Games Database",
+        "width": 800,
+        "height": 1126
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [
+        {
+          "title": "Fire Pro Wrestling Z gameplay (PS2)",
+          "sourceUrl": "https://www.youtube.com/watch?v=AcOWWeS_eqc",
+          "thumbnailUrl": "https://img.youtube.com/vi/AcOWWeS_eqc/hqdefault.jpg",
+          "credit": "ZetaKong / YouTube"
+        }
+      ],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/fire-pro-wrestling-z",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "MobyGames game catalog",
+          "url": "https://www.mobygames.com/game/62693/fire-pro-wrestling-z/",
+          "facts": ""
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/134644-fire-pro-wrestling-z",
+          "facts": "Fire Pro Wrestling Z - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "king-of-colosseum-ii",
+      "title": "King of Colosseum II",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "2004-09-09",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "PlayStation 2"
+      ],
+      "developer": "Spike Chunsoft",
+      "publisher": "Spike Chunsoft",
+      "promotions": [
+        "New Japan Pro Wrestling",
+        "All Japan Pro Wrestling",
+        "Pro Wrestling NOAH",
+        "Pro Wrestling ZERO-ONE"
+      ],
+      "series": "King of Colosseum",
+      "significance": "The single-disc sequel expands the roster and adds a dedicated Match Maker booking mode.",
+      "history": "The later sequel brings the Japanese wrestling simulation branch together in one PlayStation 2 game, with more than 160 licensed wrestlers.",
+      "features": "Match Maker lets players book promotion matches. Exhibition, Survival Road, Title Match, Series, Edit and Dojo modes offer additional career and match options.",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/5e0bc2e9-90e2-45bd-b974-ecb0e2aca933.png",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/88603-king-of-colosseum-ii",
+        "credit": "LaunchBox Games Database",
+        "width": 500,
+        "height": 710
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [
+        {
+          "title": "King of Colosseum II gameplay (PS2)",
+          "sourceUrl": "https://www.youtube.com/watch?v=X_cSWArORrc",
+          "thumbnailUrl": "https://img.youtube.com/vi/X_cSWArORrc/hqdefault.jpg",
+          "credit": "Rev / YouTube"
+        }
+      ],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/king-of-colosseum-ii",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/88603-king-of-colosseum-ii",
+          "facts": "King of Colosseum II - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "rumble-roses",
+      "title": "Rumble Roses",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "2004-11-09",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "PlayStation 2"
+      ],
+      "developer": "Yuke\u0027s",
+      "publisher": "Konami",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "",
+      "significance": "",
+      "history": "",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/11325e1e-3fdb-4ec7-a25c-6b14b8e6104d.png",
+        "region": "North America",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/9419-rumble-roses",
+        "credit": "LaunchBox Games Database",
+        "width": 1642,
+        "height": 2348
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/rumble-roses",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/9419-rumble-roses",
+          "facts": "Rumble Roses - Box - Front - Reconstructed Image (North America)"
+        }
+      ]
+    },
+    {
+      "id": "fire-pro-wrestling-returns",
+      "title": "Fire Pro Wrestling Returns",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "2005-09-15",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "PlayStation 2"
+      ],
+      "developer": "Spike Chunsoft",
+      "publisher": "Spike Chunsoft, Agetec",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Wrestling",
+      "significance": "The final mainline Fire Pro before its modern revival.",
+      "history": "The classic sprite-based series returned on PlayStation 2 before a long gap leading to World.",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/r2_bafb1988-80cf-40f9-be6e-55ca5d481a59.jpg",
+        "region": "Japan",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/6965-fire-pro-wrestling-returns",
+        "credit": "LaunchBox Games Database",
+        "width": 997,
+        "height": 1390
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/fire-pro-wrestling-returns",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "Spike Chunsoft developer retrospective",
+          "url": "https://spike-chunsoft.com/FPWW/special.html",
+          "facts": ""
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/6965-fire-pro-wrestling-returns",
+          "facts": "Fire Pro Wrestling Returns - Box - Front Image (Japan)"
+        }
+      ]
+    },
+    {
+      "id": "fire-pro-wrestling-xbl-arcade",
+      "title": "Fire Pro Wrestling (Xbox Live Arcade)",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "2012-09-21",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "Xbox 360"
+      ],
+      "developer": "Spike Chunsoft",
+      "publisher": "Spike Chunsoft",
+      "promotions": [
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Wrestling",
+      "significance": "A separate avatar-wrestling experiment, distinct from the traditional sprite games.",
+      "history": "An unusual Xbox Live Avatar-based take on Fire Pro with online and offline matches.",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/8c948ba8-4c54-4830-81a7-01e3d3c6ef80.jpg",
+        "region": "World",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/150675-fire-pro-wrestling",
+        "credit": "LaunchBox Games Database",
+        "width": 219,
+        "height": 300
+      },
+      "regional": [],
+      "screenshots": [],
+      "videos": [],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/fire-pro-wrestling-xbl-arcade",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/150675-fire-pro-wrestling",
+          "facts": "Fire Pro Wrestling - Box - Front Image (World)"
+        }
+      ]
+    },
+    {
+      "id": "fire-pro-wrestling-world",
+      "title": "Fire Pro Wrestling World",
+      "alternateTitles": [],
+      "releases": [
+        {
+          "region": "",
+          "date": "2017-12-18",
+          "platform": ""
+        }
+      ],
+      "platforms": [
+        "PC Windows",
+        "PlayStation 4"
+      ],
+      "developer": "Spike Chunsoft",
+      "publisher": "Spike Chunsoft",
+      "promotions": [
+        "New Japan Pro Wrestling",
+        "World Wonder Ring Stardom",
+        "Independent Circuit"
+      ],
+      "series": "Fire Pro Wrestling",
+      "significance": "A new generation of edits, Workshop sharing and modern Fire Pro.",
+      "history": "World revived Fire Pro on Steam in 2017 and PlayStation 4 in 2018, restoring deep wrestler and ring customization.",
+      "features": "",
+      "boxArt": {
+        "url": "https://images.launchbox-app.com/7fd1348d-831e-421b-90b7-f3b11ba3edc3.jpg",
+        "region": "North America",
+        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/105394-fire-pro-wrestling-world",
+        "credit": "LaunchBox Games Database",
+        "width": 1210,
+        "height": 1513
+      },
+      "regional": [],
+      "screenshots": [
+        {
+          "title": "World screenshot 1",
+          "sourceUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_01.png",
+          "thumbnailUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_01.png",
+          "credit": "Spike Chunsoft"
+        },
+        {
+          "title": "World screenshot 2",
+          "sourceUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_02.jpg",
+          "thumbnailUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_02.jpg",
+          "credit": "Spike Chunsoft"
+        },
+        {
+          "title": "World screenshot 3",
+          "sourceUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_03.png",
+          "thumbnailUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_03.png",
+          "credit": "Spike Chunsoft"
+        },
+        {
+          "title": "World screenshot 4",
+          "sourceUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_04.png",
+          "thumbnailUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_04.png",
+          "credit": "Spike Chunsoft"
+        },
+        {
+          "title": "World screenshot 5",
+          "sourceUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_05.png",
+          "thumbnailUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_05.png",
+          "credit": "Spike Chunsoft"
+        }
+      ],
+      "videos": [
+        {
+          "title": "Official Fire Pro Wrestling World trailer",
+          "sourceUrl": "https://www.youtube.com/watch?v=1CjxfIi2DgA",
+          "thumbnailUrl": "https://img.youtube.com/vi/1CjxfIi2DgA/hqdefault.jpg",
+          "credit": "Spike Chunsoft on YouTube"
+        }
+      ],
+      "rosterSourceUrl": "",
+      "roster": [],
+      "sources": [
+        {
+          "label": "The SmackDown Hotel game archive",
+          "url": "https://www.thesmackdownhotel.com/games/fire-pro-wrestling-world",
+          "facts": "Release date, platforms, developer, publisher, promotion, series"
+        },
+        {
+          "label": "Official Spike Chunsoft game page",
+          "url": "https://www.spike-chunsoft.com/games/fire-pro-wrestling-world/",
+          "facts": ""
+        },
+        {
+          "label": "LaunchBox Games Database (box art)",
+          "url": "https://gamesdb.launchbox-app.com/games/images/105394-fire-pro-wrestling-world",
+          "facts": "Fire Pro Wrestling World - Box - Front Image (North America)"
+        }
+      ]
+    }
+  ]
+}

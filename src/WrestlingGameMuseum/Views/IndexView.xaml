@@ -1,0 +1,194 @@
+<UserControl x:Class="WrestlingGameMuseum.Views.IndexView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             xmlns:primitives="clr-namespace:System.Windows.Controls.Primitives;assembly=PresentationFramework"
+             xmlns:core="clr-namespace:WrestlingGameMuseum.Core;assembly=WrestlingGameMuseum.Core"
+             xmlns:svc="clr-namespace:WrestlingGameMuseum.Services"
+             xmlns:local="clr-namespace:WrestlingGameMuseum"
+             xmlns:views="clr-namespace:WrestlingGameMuseum.Views"
+             SizeChanged="OnSizeChanged">
+  <UserControl.Resources>
+    <BooleanToVisibilityConverter x:Key="BoolToVisibility" />
+    <local:NotEmptyToVisibilityConverter x:Key="NotEmptyToVisibility" />
+
+    <!-- One box standing on the shelf. The whole tile opens the exhibit. -->
+    <DataTemplate x:Key="TileTemplate" DataType="{x:Type core:Game}">
+      <Button Style="{StaticResource MuseumTile}" Margin="0,0,10,12" VerticalAlignment="Top"
+              Command="{Binding DataContext.OpenGameCommand, RelativeSource={RelativeSource AncestorType=views:IndexView}}"
+              CommandParameter="{Binding}"
+              ToolTip="{Binding Title, StringFormat=Open the exhibit for {0}}"
+              AutomationProperties.Name="{Binding Title, StringFormat=Open the exhibit for {0}}">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+          </Grid.RowDefinitions>
+          <Border Grid.Row="0" Background="{StaticResource Museum.ShelfBrush}"
+                  Height="{Binding DataContext.ImageHeight, RelativeSource={RelativeSource AncestorType=ItemsControl}}">
+            <Grid>
+              <!-- Shown until (or instead of) the streamed box scan. -->
+              <Border Margin="34,26,34,22" CornerRadius="6" Background="#FF1B1613" BorderBrush="#664B596D" BorderThickness="1"
+                      HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="150" Height="200">
+                <TextBlock Text="{Binding Title}" TextWrapping="Wrap" TextAlignment="Center" Margin="10"
+                           VerticalAlignment="Center" FontSize="12"
+                           Foreground="{DynamicResource TextFillColorTertiaryBrush}" />
+              </Border>
+              <Image svc:CachedImage.Url="{Binding BoxArt.Url, FallbackValue={x:Null}}" svc:CachedImage.DecodeHeight="640"
+                     Stretch="Uniform" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="20"
+                     RenderOptions.BitmapScalingMode="HighQuality">
+                <Image.Effect>
+                  <DropShadowEffect BlurRadius="20" ShadowDepth="7" Direction="270" Opacity="0.7" Color="Black" />
+                </Image.Effect>
+              </Image>
+            </Grid>
+          </Border>
+          <StackPanel Grid.Row="1" Margin="13,10,13,13">
+            <TextBlock Text="{Binding Title}" FontWeight="Bold" FontSize="15.5" TextWrapping="Wrap"
+                       TextTrimming="CharacterEllipsis" MinHeight="42" MaxHeight="42" Margin="0,0,0,8"
+                       Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+            <StackPanel Orientation="Horizontal">
+              <Border Style="{StaticResource YearChip}" VerticalAlignment="Center">
+                <TextBlock Text="{Binding YearText}" FontSize="12" FontWeight="Bold"
+                           Foreground="{StaticResource Museum.YearGoldBrush}" />
+              </Border>
+              <TextBlock Text="{Binding PlatformText}" FontSize="12" Margin="9,0,0,0" VerticalAlignment="Center"
+                         TextTrimming="CharacterEllipsis"
+                         Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+            </StackPanel>
+          </StackPanel>
+        </Grid>
+      </Button>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type core:TileRow}">
+      <ItemsControl ItemsSource="{Binding Games}" ItemTemplate="{StaticResource TileTemplate}" Focusable="False">
+        <ItemsControl.ItemsPanel>
+          <ItemsPanelTemplate>
+            <primitives:UniformGrid Rows="1" Columns="{Binding Columns}" />
+          </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+      </ItemsControl>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type core:BandRow}">
+      <Border Style="{StaticResource SectionBand}" Margin="0,10,10,10">
+        <StackPanel Orientation="Horizontal">
+          <TextBlock Text="{Binding Title}" Style="{StaticResource BandTitle}" />
+          <TextBlock Text="{Binding Note}" Style="{StaticResource BandNote}" Margin="14,0,0,0" />
+        </StackPanel>
+      </Border>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type core:EmptyRow}">
+      <Border Style="{StaticResource SectionBand}" Margin="0,24,10,10" Padding="24,22">
+        <StackPanel>
+          <StackPanel Orientation="Horizontal">
+            <ui:SymbolIcon Symbol="BookOpen24" FontSize="22" Foreground="{StaticResource Museum.GoldBrush}" Margin="0,0,10,0" />
+            <TextBlock Text="No games match what you are looking for." FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center"
+                       Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+          </StackPanel>
+          <TextBlock Style="{StaticResource BodyText}" Margin="0,8,0,12"
+                     Text="Try a shorter search, or take off a filter." />
+          <ui:Button Content="Clear filters" Appearance="Secondary" HorizontalAlignment="Left"
+                     Visibility="{Binding FiltersActive, Converter={StaticResource BoolToVisibility}}"
+                     Command="{Binding DataContext.ClearFiltersCommand, RelativeSource={RelativeSource AncestorType=views:IndexView}}" />
+        </StackPanel>
+      </Border>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type core:FooterRow}">
+      <TextBlock Margin="4,6,10,24" FontSize="11" TextWrapping="Wrap"
+                 Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                 Text="Artwork belongs to its respective owners and is streamed for personal viewing from the credited sources; no third-party artwork is bundled with this app." />
+    </DataTemplate>
+  </UserControl.Resources>
+
+  <Grid Margin="16,10,6,0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+
+    <!-- The one slim toolbar: icon, short label, one-line summary, controls on the right. -->
+    <Border Grid.Row="0" Style="{StaticResource ToolbarBand}" Margin="0,0,10,8">
+      <DockPanel LastChildFill="True">
+        <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Center">
+          <ui:TextBox Width="240" Height="34" PlaceholderText="Search the collection" ClearButtonEnabled="True"
+                      Icon="{ui:SymbolIcon Search24}"
+                      Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+                      ToolTip="Search by title, series, developer or platform"
+                      AutomationProperties.Name="Search the collection" />
+          <ui:Button Style="{StaticResource ToolbarIconButton}" Icon="{ui:SymbolIcon Filter24}"
+                     Command="{Binding ToggleFiltersCommand}"
+                     ToolTip="Show or hide the filters" AutomationProperties.Name="Show or hide filters" />
+          <ui:Button Style="{StaticResource ToolbarIconButton}" Icon="{ui:SymbolIcon GroupList24}"
+                     Command="{Binding CycleGroupingCommand}"
+                     ToolTip="{Binding GroupTip}" AutomationProperties.Name="Change how the shelves are grouped" />
+          <ui:Button Style="{StaticResource ToolbarIconButton}" Icon="{ui:SymbolIcon ArrowSort24}"
+                     Command="{Binding ToggleSortCommand}"
+                     ToolTip="{Binding SortTip}" AutomationProperties.Name="Change the sort order" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="4,0,12,0">
+          <ui:SymbolIcon Symbol="Collections24" FontSize="20" Foreground="{StaticResource Museum.GoldBrush}" Margin="0,0,9,0" />
+          <TextBlock Text="The collection" FontWeight="SemiBold" FontSize="14" VerticalAlignment="Center"
+                     Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+          <TextBlock Text="{Binding Summary}" FontSize="12.5" Margin="12,0,0,0" VerticalAlignment="Center"
+                     TextTrimming="CharacterEllipsis"
+                     Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+        </StackPanel>
+      </DockPanel>
+    </Border>
+
+    <!-- Filters only matter sometimes, so they live in a drawer. -->
+    <Border Grid.Row="1" Style="{StaticResource SectionBand}" Margin="0,0,10,8" Padding="12,8"
+            Visibility="{Binding FiltersOpen, Converter={StaticResource BoolToVisibility}}">
+      <DockPanel>
+        <ui:Button DockPanel.Dock="Right" Style="{StaticResource ToolbarIconButton}" VerticalAlignment="Bottom"
+                   Icon="{ui:SymbolIcon Eraser24}" Command="{Binding ClearFiltersCommand}"
+                   ToolTip="Clear every filter and the search" AutomationProperties.Name="Clear all filters" />
+        <WrapPanel>
+          <StackPanel Margin="0,0,10,0">
+            <TextBlock Text="ERA" Style="{StaticResource GoldLabel}" FontSize="10.5" Margin="2,0,0,3" />
+            <ComboBox Width="140" ItemsSource="{Binding Eras}" SelectedItem="{Binding SelectedEra}"
+                      ToolTip="Show one decade" AutomationProperties.Name="Filter by era" />
+          </StackPanel>
+          <StackPanel Margin="0,0,10,0">
+            <TextBlock Text="PLATFORM" Style="{StaticResource GoldLabel}" FontSize="10.5" Margin="2,0,0,3" />
+            <ComboBox Width="190" ItemsSource="{Binding Platforms}" SelectedItem="{Binding SelectedPlatform}"
+                      ToolTip="Show one platform" AutomationProperties.Name="Filter by platform" />
+          </StackPanel>
+          <StackPanel Margin="0,0,10,0">
+            <TextBlock Text="PROMOTION / LICENCE" Style="{StaticResource GoldLabel}" FontSize="10.5" Margin="2,0,0,3" />
+            <ComboBox Width="210" ItemsSource="{Binding Promotions}" SelectedItem="{Binding SelectedPromotion}"
+                      ToolTip="Show one promotion or licence" AutomationProperties.Name="Filter by promotion or licence" />
+          </StackPanel>
+          <StackPanel Margin="0,0,10,0">
+            <TextBlock Text="DEVELOPER" Style="{StaticResource GoldLabel}" FontSize="10.5" Margin="2,0,0,3" />
+            <ComboBox Width="190" ItemsSource="{Binding Developers}" SelectedItem="{Binding SelectedDeveloper}"
+                      ToolTip="Show one developer" AutomationProperties.Name="Filter by developer" />
+          </StackPanel>
+          <StackPanel Margin="0,0,10,0">
+            <TextBlock Text="SERIES" Style="{StaticResource GoldLabel}" FontSize="10.5" Margin="2,0,0,3" />
+            <ComboBox Width="190" ItemsSource="{Binding SeriesOptions}" SelectedItem="{Binding SelectedSeries}"
+                      ToolTip="Show one series" AutomationProperties.Name="Filter by series" />
+          </StackPanel>
+        </WrapPanel>
+      </DockPanel>
+    </Border>
+
+    <!-- Flat list of rows: bands and rows of tiles. Only the visible rows are ever realised. -->
+    <ListBox Grid.Row="2" x:Name="Shelves" ItemsSource="{Binding Rows}"
+             ItemContainerStyle="{StaticResource PlainRow}"
+             Background="Transparent" BorderThickness="0" Padding="0"
+             ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+             ScrollViewer.VerticalScrollBarVisibility="Auto"
+             ScrollViewer.CanContentScroll="True"
+             VirtualizingPanel.IsVirtualizing="True"
+             VirtualizingPanel.VirtualizationMode="Recycling"
+             VirtualizingPanel.ScrollUnit="Pixel"
+             VirtualizingPanel.CacheLength="1,1" VirtualizingPanel.CacheLengthUnit="Item"
+             AutomationProperties.Name="Game shelves" />
+  </Grid>
+</UserControl>

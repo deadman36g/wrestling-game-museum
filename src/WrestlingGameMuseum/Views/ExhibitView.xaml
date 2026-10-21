@@ -1,0 +1,275 @@
+<UserControl x:Class="WrestlingGameMuseum.Views.ExhibitView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             xmlns:core="clr-namespace:WrestlingGameMuseum.Core;assembly=WrestlingGameMuseum.Core"
+             xmlns:svc="clr-namespace:WrestlingGameMuseum.Services"
+             xmlns:local="clr-namespace:WrestlingGameMuseum"
+             xmlns:views="clr-namespace:WrestlingGameMuseum.Views">
+  <UserControl.Resources>
+    <BooleanToVisibilityConverter x:Key="BoolToVisibility" />
+    <local:NotEmptyToVisibilityConverter x:Key="NotEmptyToVisibility" />
+    <local:InverseBoolToVisibilityConverter x:Key="InverseBoolToVisibility" />
+
+    <Style x:Key="ExhibitCard" TargetType="Border" BasedOn="{StaticResource SectionBand}">
+      <Setter Property="Padding" Value="20,16" />
+      <Setter Property="Margin" Value="0,0,0,12" />
+    </Style>
+
+    <!-- A verified screenshot or video: the thumbnail opens its source. -->
+    <DataTemplate x:Key="MediaTemplate" DataType="{x:Type core:MediaLink}">
+      <Button Width="208" Height="128" Margin="0,0,10,10" Padding="5" Background="#FF111418"
+              BorderBrush="{StaticResource Museum.TileBorderBrush}" BorderThickness="1" Cursor="Hand"
+              Command="{Binding DataContext.OpenMediaCommand, RelativeSource={RelativeSource AncestorType=views:ExhibitView}}"
+              CommandParameter="{Binding}"
+              ToolTip="{Binding Title, StringFormat={}{0} · opens the source}"
+              AutomationProperties.Name="{Binding Title, StringFormat=Open {0}}">
+        <Image svc:CachedImage.Url="{Binding ThumbnailUrl}" svc:CachedImage.DecodeHeight="256" Stretch="Uniform"
+               RenderOptions.BitmapScalingMode="HighQuality" />
+      </Button>
+    </DataTemplate>
+  </UserControl.Resources>
+
+  <Grid Margin="16,10,6,0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+
+    <Border Grid.Row="0" Style="{StaticResource ToolbarBand}" Margin="0,0,10,8">
+      <DockPanel LastChildFill="True">
+        <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Center">
+          <TextBlock Text="{Binding ExhibitPosition}" FontSize="12" VerticalAlignment="Center" Margin="0,0,8,0"
+                     Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+          <ui:Button Style="{StaticResource ToolbarIconButton}" Icon="{ui:SymbolIcon ChevronLeft24}"
+                     Command="{Binding PreviousGameCommand}"
+                     ToolTip="Previous game (Left arrow)" AutomationProperties.Name="Previous game" />
+          <ui:Button Style="{StaticResource ToolbarIconButton}" Icon="{ui:SymbolIcon ChevronRight24}"
+                     Command="{Binding NextGameCommand}"
+                     ToolTip="Next game (Right arrow)" AutomationProperties.Name="Next game" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+          <ui:Button Style="{StaticResource ToolbarIconButton}" Icon="{ui:SymbolIcon ArrowLeft24}" Margin="0,0,10,0"
+                     Command="{Binding CloseExhibitCommand}"
+                     ToolTip="Back to the collection (Backspace or Esc)" AutomationProperties.Name="Back to the collection" />
+          <TextBlock Text="{Binding ExhibitLabel}" FontSize="12.5" FontWeight="SemiBold" VerticalAlignment="Center"
+                     Foreground="{StaticResource Museum.GoldBrush}" />
+          <TextBlock Text="{Binding SelectedGame.Title}" FontSize="12.5" Margin="14,0,0,0" VerticalAlignment="Center"
+                     TextTrimming="CharacterEllipsis" Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+        </StackPanel>
+      </DockPanel>
+    </Border>
+
+    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"
+                  AutomationProperties.Name="Exhibit details">
+      <StackPanel Margin="0,0,10,24" DataContext="{Binding SelectedGame}">
+
+        <!-- Header: box at its real shape on the left, the story on the right. -->
+        <Border Style="{StaticResource ExhibitCard}" Padding="24,22">
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Width="320" Margin="0,0,26,0" VerticalAlignment="Top">
+              <Grid MaxHeight="380">
+                <Border CornerRadius="6" Background="#FF1B1613" BorderBrush="#664B596D" BorderThickness="1"
+                        Width="200" Height="270" HorizontalAlignment="Center">
+                  <TextBlock Text="No box art yet" TextAlignment="Center" VerticalAlignment="Center"
+                             Foreground="{DynamicResource TextFillColorTertiaryBrush}" />
+                </Border>
+                <Image svc:CachedImage.Url="{Binding BoxArt.Url, FallbackValue={x:Null}}" svc:CachedImage.DecodeHeight="760"
+                       Stretch="Uniform" MaxWidth="320" MaxHeight="380" HorizontalAlignment="Center"
+                       RenderOptions.BitmapScalingMode="HighQuality" Margin="0,0,0,10">
+                  <Image.Effect>
+                    <DropShadowEffect BlurRadius="20" ShadowDepth="7" Direction="270" Opacity="0.7" Color="Black" />
+                  </Image.Effect>
+                </Image>
+              </Grid>
+              <TextBlock FontSize="11" TextWrapping="Wrap" Margin="2,12,0,0" TextAlignment="Center"
+                         Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                         Visibility="{Binding BoxArt, Converter={StaticResource NotEmptyToVisibility}}">
+                <Run Text="Box art:" />
+                <Run Text="{Binding BoxArt.Credit, Mode=OneWay, FallbackValue=''}" />
+                <Run Text="{Binding BoxArt.Region, Mode=OneWay, StringFormat=({0}), FallbackValue=''}" />
+              </TextBlock>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+              <TextBlock Text="{Binding Eyebrow}" Style="{StaticResource GoldLabel}" FontSize="12.5"
+                         Visibility="{Binding Eyebrow, Converter={StaticResource NotEmptyToVisibility}}" />
+              <TextBlock Text="{Binding Title}" Style="{StaticResource ExhibitHeading}" Margin="0,4,0,14" />
+              <ItemsControl ItemsSource="{Binding Facts}" Focusable="False">
+                <ItemsControl.ItemsPanel>
+                  <ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                  <DataTemplate DataType="{x:Type core:Fact}">
+                    <Border Style="{StaticResource FactChip}">
+                      <StackPanel>
+                        <TextBlock Text="{Binding Label}" FontSize="11" Foreground="{DynamicResource TextFillColorTertiaryBrush}" />
+                        <TextBlock Text="{Binding Value}" FontSize="13.5" FontWeight="SemiBold"
+                                   Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+                      </StackPanel>
+                    </Border>
+                  </DataTemplate>
+                </ItemsControl.ItemTemplate>
+              </ItemsControl>
+
+              <Border BorderBrush="{StaticResource Museum.GoldBrush}" BorderThickness="3,0,0,0" Padding="14,2,0,2" Margin="0,10,0,6"
+                      Visibility="{Binding Significance, Converter={StaticResource NotEmptyToVisibility}}">
+                <TextBlock Text="{Binding Significance}" FontSize="16" FontStyle="Italic" TextWrapping="Wrap" LineHeight="24"
+                           Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+              </Border>
+
+              <TextBlock Text="THE STORY" Style="{StaticResource GoldLabel}" Margin="0,16,0,6"
+                         Visibility="{Binding History, Converter={StaticResource NotEmptyToVisibility}}" />
+              <TextBlock Text="{Binding History}" Style="{StaticResource BodyText}"
+                         Visibility="{Binding History, Converter={StaticResource NotEmptyToVisibility}}" />
+              <TextBlock Text="PLAY AND FEATURES" Style="{StaticResource GoldLabel}" Margin="0,16,0,6"
+                         Visibility="{Binding Features, Converter={StaticResource NotEmptyToVisibility}}" />
+              <TextBlock Text="{Binding Features}" Style="{StaticResource BodyText}"
+                         Visibility="{Binding Features, Converter={StaticResource NotEmptyToVisibility}}" />
+            </StackPanel>
+          </Grid>
+        </Border>
+
+        <!-- Regional releases: each with its own box thumbnail. -->
+        <Border Style="{StaticResource ExhibitCard}" Visibility="{Binding HasRegional, Converter={StaticResource BoolToVisibility}}">
+          <StackPanel>
+            <TextBlock Text="Regional releases" Style="{StaticResource BandTitle}" Margin="0,0,0,10" />
+            <ItemsControl ItemsSource="{Binding Regional}" Focusable="False">
+              <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate>
+              </ItemsControl.ItemsPanel>
+              <ItemsControl.ItemTemplate>
+                <DataTemplate DataType="{x:Type core:RegionalRelease}">
+                  <StackPanel Orientation="Horizontal" Margin="0,0,24,12">
+                    <Image svc:CachedImage.Url="{Binding BoxArtUrl}" svc:CachedImage.DecodeHeight="240" Height="110" Width="90"
+                           Stretch="Uniform" RenderOptions.BitmapScalingMode="HighQuality" Margin="0,0,12,0" />
+                    <StackPanel VerticalAlignment="Center">
+                      <TextBlock Text="{Binding Region}" Style="{StaticResource GoldLabel}" />
+                      <TextBlock Text="{Binding Title}" FontWeight="SemiBold" Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+                      <TextBlock Text="{Binding Date}" FontSize="12" Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                  </StackPanel>
+                </DataTemplate>
+              </ItemsControl.ItemTemplate>
+            </ItemsControl>
+          </StackPanel>
+        </Border>
+
+        <Border Style="{StaticResource ExhibitCard}">
+          <StackPanel>
+            <TextBlock Text="Screenshots" Style="{StaticResource BandTitle}" Margin="0,0,0,10" />
+            <ItemsControl ItemsSource="{Binding Screenshots}" ItemTemplate="{StaticResource MediaTemplate}" Focusable="False"
+                          Visibility="{Binding HasScreenshots, Converter={StaticResource BoolToVisibility}}">
+              <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate>
+              </ItemsControl.ItemsPanel>
+            </ItemsControl>
+            <StackPanel Visibility="{Binding HasScreenshots, Converter={StaticResource InverseBoolToVisibility}}">
+              <TextBlock Text="No verified screenshots for this game yet." Style="{StaticResource BodyText}" Margin="0,0,0,10" />
+              <ui:Button Content="Find screenshots" Icon="{ui:SymbolIcon Image24}" Appearance="Secondary"
+                         Command="{Binding DataContext.FindScreenshotsCommand, RelativeSource={RelativeSource AncestorType=views:ExhibitView}}"
+                         CommandParameter="{Binding}"
+                         ToolTip="Open an image search for this game; the results are not checked"
+                         AutomationProperties.Name="Find screenshots" />
+            </StackPanel>
+          </StackPanel>
+        </Border>
+
+        <Border Style="{StaticResource ExhibitCard}">
+          <StackPanel>
+            <TextBlock Text="Videos" Style="{StaticResource BandTitle}" Margin="0,0,0,10" />
+            <ItemsControl ItemsSource="{Binding Videos}" ItemTemplate="{StaticResource MediaTemplate}" Focusable="False"
+                          Visibility="{Binding HasVideos, Converter={StaticResource BoolToVisibility}}">
+              <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate>
+              </ItemsControl.ItemsPanel>
+            </ItemsControl>
+            <StackPanel Visibility="{Binding HasVideos, Converter={StaticResource InverseBoolToVisibility}}">
+              <TextBlock Text="No verified gameplay video for this game yet." Style="{StaticResource BodyText}" Margin="0,0,0,10" />
+              <ui:Button Content="Find gameplay videos" Icon="{ui:SymbolIcon Video24}" Appearance="Secondary"
+                         Command="{Binding DataContext.FindVideosCommand, RelativeSource={RelativeSource AncestorType=views:ExhibitView}}"
+                         CommandParameter="{Binding}"
+                         ToolTip="Open a video search for this game; the results are not checked"
+                         AutomationProperties.Name="Find gameplay videos" />
+            </StackPanel>
+          </StackPanel>
+        </Border>
+
+        <!-- Roster: a searchable spreadsheet when documented; never invented names. -->
+        <Border Style="{StaticResource ExhibitCard}">
+          <StackPanel>
+            <TextBlock Text="Roster" Style="{StaticResource BandTitle}" Margin="0,0,0,10" />
+            <StackPanel Visibility="{Binding DataContext.RosterInProgress, RelativeSource={RelativeSource AncestorType=views:ExhibitView}, Converter={StaticResource BoolToVisibility}}">
+              <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
+                <ui:SymbolIcon Symbol="BookOpen24" FontSize="20" Foreground="{StaticResource Museum.GoldBrush}" Margin="0,0,10,0" />
+                <TextBlock Text="Roster research in progress" FontSize="15" FontWeight="SemiBold" VerticalAlignment="Center"
+                           Foreground="{DynamicResource TextFillColorPrimaryBrush}" />
+              </StackPanel>
+              <TextBlock Style="{StaticResource BodyText}"
+                         Text="This game's wrestler list has not been fully verified yet. Rather than guess, the roster appears here once it is documented." />
+              <ui:Button Content="Explore the historical source" Icon="{ui:SymbolIcon Open24}" Appearance="Secondary" Margin="0,10,0,0"
+                         HorizontalAlignment="Left"
+                         Visibility="{Binding RosterSourceUrl, Converter={StaticResource NotEmptyToVisibility}}"
+                         Command="{Binding DataContext.OpenLinkCommand, RelativeSource={RelativeSource AncestorType=views:ExhibitView}}"
+                         CommandParameter="{Binding RosterSourceUrl}"
+                         ToolTip="Open the page this roster research starts from"
+                         AutomationProperties.Name="Open the roster source" />
+            </StackPanel>
+            <StackPanel Visibility="{Binding DataContext.HasRoster, RelativeSource={RelativeSource AncestorType=views:ExhibitView}, Converter={StaticResource BoolToVisibility}}">
+              <ui:TextBox Width="300" HorizontalAlignment="Left" Margin="0,0,0,10" PlaceholderText="Find a wrestler"
+                          Icon="{ui:SymbolIcon Search24}" ClearButtonEnabled="True"
+                          Text="{Binding DataContext.RosterSearch, RelativeSource={RelativeSource AncestorType=views:ExhibitView}, UpdateSourceTrigger=PropertyChanged}"
+                          ToolTip="Filter this game's roster" AutomationProperties.Name="Filter the roster" />
+              <DataGrid ItemsSource="{Binding DataContext.RosterRows, RelativeSource={RelativeSource AncestorType=views:ExhibitView}}"
+                        AutoGenerateColumns="False" IsReadOnly="True" MinHeight="260" MaxHeight="520"
+                        HeadersVisibility="Column" GridLinesVisibility="All"
+                        EnableRowVirtualization="True" CanUserResizeColumns="True" CanUserSortColumns="True"
+                        AutomationProperties.Name="Roster spreadsheet">
+                <DataGrid.Columns>
+                  <DataGridTextColumn Header="In-game name" Binding="{Binding Name}" Width="1.6*" />
+                  <DataGridTextColumn Header="Real wrestler" Binding="{Binding RealName}" Width="1.6*" />
+                  <DataGridTextColumn Header="Group" Binding="{Binding Group}" Width="1.2*" />
+                  <DataGridTextColumn Header="Notes" Binding="{Binding Note}" Width="2*" />
+                </DataGrid.Columns>
+              </DataGrid>
+            </StackPanel>
+          </StackPanel>
+        </Border>
+
+        <!-- Every source used, with a link. -->
+        <Border Style="{StaticResource ExhibitCard}">
+          <StackPanel>
+            <TextBlock Text="Sources &amp; credits" Style="{StaticResource BandTitle}" Margin="0,0,0,10" />
+            <ItemsControl ItemsSource="{Binding Sources}" Focusable="False">
+              <ItemsControl.ItemTemplate>
+                <DataTemplate DataType="{x:Type core:SourceRef}">
+                  <DockPanel Margin="0,0,0,8" LastChildFill="True">
+                    <ui:Button DockPanel.Dock="Left" Style="{StaticResource ToolbarIconButton}" Margin="0,0,10,0" VerticalAlignment="Top"
+                               Icon="{ui:SymbolIcon Open24}"
+                               Command="{Binding DataContext.OpenLinkCommand, RelativeSource={RelativeSource AncestorType=views:ExhibitView}}"
+                               CommandParameter="{Binding Url}"
+                               ToolTip="{Binding Url}"
+                               AutomationProperties.Name="{Binding Label, StringFormat=Open source: {0}}" />
+                    <StackPanel VerticalAlignment="Center">
+                      <TextBlock Text="{Binding Label}" FontWeight="SemiBold" Foreground="{DynamicResource TextFillColorPrimaryBrush}" TextWrapping="Wrap" />
+                      <TextBlock Text="{Binding Facts}" FontSize="12" TextWrapping="Wrap"
+                                 Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                                 Visibility="{Binding Facts, Converter={StaticResource NotEmptyToVisibility}}" />
+                    </StackPanel>
+                  </DockPanel>
+                </DataTemplate>
+              </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <TextBlock Margin="0,6,0,0" FontSize="11" TextWrapping="Wrap"
+                       Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                       Text="Artwork belongs to its respective owners and is streamed for personal viewing from the credited sources; no third-party artwork is bundled with this app." />
+          </StackPanel>
+        </Border>
+      </StackPanel>
+    </ScrollViewer>
+  </Grid>
+</UserControl>

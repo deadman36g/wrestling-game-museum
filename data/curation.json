@@ -1,0 +1,390 @@
+{
+  "games": [
+    {
+      "slug": "fire-pro-wrestling-combination-tag",
+      "title": "Fire Pro Wrestling Combination Tag",
+      "series": "Fire Pro Wrestling",
+      "significance": "The starting bell: singles, tags and five-on-five elimination contests.",
+      "history": "The original Human Entertainment Fire Pro game established a Japanese wrestling series built around fictionalized versions of real wrestlers.",
+      "japanOnly": true,
+      "rosterSourceUrl": "https://gamefaqs.gamespot.com/tg16/588971-fire-prowrestling-combination-tag/faqs/10962"
+    },
+    {
+      "slug": "fire-pro-wrestling-2nd-bout",
+      "title": "Fire Pro Wrestling 2nd Bout",
+      "series": "Fire Pro Wrestling",
+      "significance": "Expands the foundation laid by Combination Tag.",
+      "history": "A PC Engine follow-up with more wrestlers and championship, tournament and elimination options.",
+      "japanOnly": true
+    },
+    {
+      "slug": "super-fire-pro-wrestling",
+      "title": "Super Fire Pro Wrestling",
+      "series": "Fire Pro Wrestling",
+      "significance": "Fire Pro's first major Super Famicom milestone.",
+      "history": "The series moved into the 16-bit Super Famicom era with a bigger presentation and an evolving roster.",
+      "japanOnly": true
+    },
+    {
+      "slug": "super-fire-pro-wrestling-2",
+      "title": "Super Fire Pro Wrestling 2",
+      "series": "Fire Pro Wrestling",
+      "significance": "A bridge between the original Super game and Final Bout.",
+      "history": "A follow-up to the first Super Famicom entry, continuing the series' rapid 16-bit development.",
+      "japanOnly": true
+    },
+    {
+      "slug": "fire-pro-wrestling-3-legend-bout",
+      "title": "Fire Pro Wrestling 3: Legend Bout",
+      "series": "Fire Pro Wrestling",
+      "significance": "One of the final original PC Engine milestones.",
+      "history": "The PC Engine branch grew to 32 challengers, including singles, tag and handicap exhibition matches.",
+      "japanOnly": true
+    },
+    {
+      "slug": "super-fire-pro-wrestling-iii-final-bout",
+      "title": "Super Fire Pro Wrestling III: Final Bout",
+      "series": "Fire Pro Wrestling",
+      "significance": "A pivotal step for the expanding wrestler roster and Edit feature.",
+      "history": "A larger 16-bit entry notable for its 64 playable wrestlers, wrestler editing and new battle royal options.",
+      "japanOnly": true
+    },
+    {
+      "slug": "super-fire-pro-wrestling-special",
+      "title": "Super Fire Pro Wrestling Special",
+      "series": "Fire Pro Wrestling",
+      "significance": "A distinctive story-mode experiment in the 16-bit series.",
+      "history": "A Super Famicom entry remembered for its unusual story campaign and further refinement of the Fire Pro formula.",
+      "japanOnly": true,
+      "screenshots": [
+        {
+          "title": "Super Fire Pro Wrestling Special — ring action",
+          "sourceUrl": "https://kotaku.com/games/super-fire-pro-wrestling-special/gallery/1",
+          "thumbnailUrl": "https://kotaku.com/igdb/image/upload/t_original/scp8hu.jpg",
+          "credit": "Kotaku / Human Entertainment"
+        },
+        {
+          "title": "Super Fire Pro Wrestling Special — Gruesome Fighting",
+          "sourceUrl": "https://kotaku.com/games/super-fire-pro-wrestling-special/gallery/2",
+          "thumbnailUrl": "https://kotaku.com/igdb/image/upload/t_original/scp8hv.jpg",
+          "credit": "Kotaku / Human Entertainment"
+        }
+      ]
+    },
+    {
+      "slug": "super-fire-pro-wrestling-x",
+      "title": "Super Fire Pro Wrestling X",
+      "series": "Fire Pro Wrestling",
+      "significance": "A major late-generation 16-bit milestone, followed by X Premium in March 1996.",
+      "history": "Released in Japan on December 22, 1995 by Human Entertainment, Super Fire Pro Wrestling X brought one of the most ambitious sprite-based wrestling rosters to the Super Famicom. Its timed grapples and wide range of Japanese and American wrestling styles were complemented by tournaments, leagues, championship pursuits, four-person battle royals and wrestler editing. It also brought characters from the Blazing Tornado arcade branch into the main Fire Pro world.",
+      "features": "Play singles, tag matches, one-night dream matches, leagues, elimination contests and a four-wrestler battle royal. Edit mode lets you create wrestlers with individual moves, appearance and skills.",
+      "japanOnly": true,
+      "launchBoxId": "28949-super-fire-pro-wrestling-x",
+      "alternateTitles": [
+        "Super Fire Pro Wrestling X Premium"
+      ],
+      "rosterSourceUrl": "https://www.thesmackdownhotel.com/games/super-fire-pro-wrestling-x",
+      "screenshots": [
+        {
+          "title": "Gameplay",
+          "sourceUrl": "https://images.launchbox-app.com/2cc5f967-a8f2-4764-94de-85aa7c031441.png",
+          "thumbnailUrl": "https://images.launchbox-app.com/2cc5f967-a8f2-4764-94de-85aa7c031441.png",
+          "credit": "LaunchBox Games Database"
+        },
+        {
+          "title": "Title screen",
+          "sourceUrl": "https://images.launchbox-app.com/1a37e7bc-8ecf-4177-b6b5-229d2a93bccd.png",
+          "thumbnailUrl": "https://images.launchbox-app.com/1a37e7bc-8ecf-4177-b6b5-229d2a93bccd.png",
+          "credit": "LaunchBox Games Database"
+        }
+      ],
+      "videos": [
+        {
+          "title": "Gameplay",
+          "sourceUrl": "https://www.youtube.com/watch?v=PnVz50Ops0A",
+          "thumbnailUrl": "https://img.youtube.com/vi/PnVz50Ops0A/hqdefault.jpg",
+          "credit": "ShiryuGL / YouTube"
+        }
+      ]
+    },
+    {
+      "slug": "fire-pro-wrestling-iron-slam-96",
+      "title": "Fire Pro Wrestling Iron Slam '96",
+      "series": "Fire Pro Wrestling",
+      "significance": "An experimental 3D branch of the Fire Pro family.",
+      "history": "An early polygonal experiment on PlayStation, quite different visually from Fire Pro's familiar sprites.",
+      "japanOnly": true,
+      "noBoxArtReason": "LaunchBox only has a logo on white (no box scan)"
+    },
+    {
+      "slug": "fire-pro-wrestling-s-6-men-scramble",
+      "title": "Fire Prowrestling S: 6Men Scramble",
+      "series": "Fire Pro Wrestling",
+      "significance": "A memorable multi-person Saturn outing.",
+      "history": "Six wrestlers could appear at once in the Saturn installment, alongside six-man tags and a large roster.",
+      "japanOnly": true,
+      "launchBoxQuery": "Fire Prowrestling S: 6Men Scramble",
+      "launchBoxId": "32771-fire-pro-wrestling-s-6men-scramble"
+    },
+    {
+      "slug": "fire-pro-wrestling-g",
+      "title": "Fire Pro Wrestling G",
+      "series": "Fire Pro Wrestling",
+      "significance": "A late-1990s console milestone discussed in the official World developer retrospective.",
+      "history": "The PlayStation title occupies an important point between Human-era Fire Pro and the Spike-produced games.",
+      "features": "Late PlayStation-era Fire Pro; connects the 16-bit era to the Dreamcast and PS2 period.",
+      "japanOnly": true,
+      "extraSources": [
+        {
+          "label": "Spike Chunsoft developer retrospective",
+          "url": "https://spike-chunsoft.com/FPWW/special.html"
+        }
+      ]
+    },
+    {
+      "slug": "fire-pro-wrestling",
+      "title": "Fire Pro Wrestling",
+      "series": "Fire Pro Wrestling",
+      "significance": "The handheld entry that introduced Fire Pro to many players outside Japan.",
+      "history": "The WonderSwan version began in 2000; a Game Boy Advance edition became Fire Pro's first official North American release in 2001.",
+      "extraSources": [
+        {
+          "label": "MobyGames game catalog",
+          "url": "https://www.mobygames.com/game/30379/fire-pro-wrestling/"
+        }
+      ]
+    },
+    {
+      "slug": "fire-pro-wrestling-d",
+      "title": "Fire Pro Wrestling D",
+      "series": "Fire Pro Wrestling",
+      "significance": "A substantial Dreamcast home for Fire Pro creation.",
+      "history": "The Dreamcast installment extended the classic presentation and edit tools to wrestlers, referees, organizations and rings.",
+      "features": "Includes wrestler, referee, ring and organization editing in the Dreamcast entry.",
+      "japanOnly": true,
+      "extraSources": [
+        {
+          "label": "MobyGames game catalog",
+          "url": "https://www.mobygames.com/game/21074/fire-pro-wrestling-d/"
+        }
+      ],
+      "videos": [
+        {
+          "title": "Fire Pro Wrestling D gameplay (Dreamcast)",
+          "sourceUrl": "https://www.youtube.com/watch?v=wd5tofgZLPs",
+          "thumbnailUrl": "https://img.youtube.com/vi/wd5tofgZLPs/hqdefault.jpg",
+          "credit": "VideoGaming4U / YouTube"
+        }
+      ]
+    },
+    {
+      "slug": "fire-pro-wrestling-2",
+      "title": "Fire Pro Wrestling 2",
+      "series": "Fire Pro Wrestling",
+      "significance": "Continues Fire Pro's portable international expansion.",
+      "history": "The second officially English-language Game Boy Advance release followed the first handheld Fire Pro."
+    },
+    {
+      "slug": "fire-pro-wrestling-z",
+      "title": "Fire Pro Wrestling Z",
+      "series": "Fire Pro Wrestling",
+      "significance": "One of the last major entries before Returns.",
+      "history": "A PlayStation 2 entry with a large move library and a team-centered story/career-style campaign.",
+      "japanOnly": true,
+      "extraSources": [
+        {
+          "label": "MobyGames game catalog",
+          "url": "https://www.mobygames.com/game/62693/fire-pro-wrestling-z/"
+        }
+      ],
+      "videos": [
+        {
+          "title": "Fire Pro Wrestling Z gameplay (PS2)",
+          "sourceUrl": "https://www.youtube.com/watch?v=AcOWWeS_eqc",
+          "thumbnailUrl": "https://img.youtube.com/vi/AcOWWeS_eqc/hqdefault.jpg",
+          "credit": "ZetaKong / YouTube"
+        }
+      ]
+    },
+    {
+      "slug": "fire-pro-wrestling-returns",
+      "title": "Fire Pro Wrestling Returns",
+      "series": "Fire Pro Wrestling",
+      "significance": "The final mainline Fire Pro before its modern revival.",
+      "history": "The classic sprite-based series returned on PlayStation 2 before a long gap leading to World.",
+      "japanOnly": true,
+      "extraSources": [
+        {
+          "label": "Spike Chunsoft developer retrospective",
+          "url": "https://spike-chunsoft.com/FPWW/special.html"
+        }
+      ]
+    },
+    {
+      "slug": "fire-pro-wrestling-xbl-arcade",
+      "title": "Fire Pro Wrestling (Xbox Live Arcade)",
+      "series": "Fire Pro Wrestling",
+      "significance": "A separate avatar-wrestling experiment, distinct from the traditional sprite games.",
+      "history": "An unusual Xbox Live Avatar-based take on Fire Pro with online and offline matches.",
+      "launchBoxQuery": "Fire Pro Wrestling",
+      "launchBoxId": "150675-fire-pro-wrestling"
+    },
+    {
+      "slug": "fire-pro-wrestling-world",
+      "title": "Fire Pro Wrestling World",
+      "series": "Fire Pro Wrestling",
+      "significance": "A new generation of edits, Workshop sharing and modern Fire Pro.",
+      "history": "World revived Fire Pro on Steam in 2017 and PlayStation 4 in 2018, restoring deep wrestler and ring customization.",
+      "extraSources": [
+        {
+          "label": "Official Spike Chunsoft game page",
+          "url": "https://www.spike-chunsoft.com/games/fire-pro-wrestling-world/"
+        }
+      ],
+      "screenshots": [
+        {
+          "title": "World screenshot 1",
+          "sourceUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_01.png",
+          "thumbnailUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_01.png",
+          "credit": "Spike Chunsoft"
+        },
+        {
+          "title": "World screenshot 2",
+          "sourceUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_02.jpg",
+          "thumbnailUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_02.jpg",
+          "credit": "Spike Chunsoft"
+        },
+        {
+          "title": "World screenshot 3",
+          "sourceUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_03.png",
+          "thumbnailUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_03.png",
+          "credit": "Spike Chunsoft"
+        },
+        {
+          "title": "World screenshot 4",
+          "sourceUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_04.png",
+          "thumbnailUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_04.png",
+          "credit": "Spike Chunsoft"
+        },
+        {
+          "title": "World screenshot 5",
+          "sourceUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_05.png",
+          "thumbnailUrl": "https://www.spike-chunsoft.com/wp-content/uploads/Fire-Pro-Wrestling-World_05.png",
+          "credit": "Spike Chunsoft"
+        }
+      ],
+      "videos": [
+        {
+          "title": "Official Fire Pro Wrestling World trailer",
+          "sourceUrl": "https://www.youtube.com/watch?v=1CjxfIi2DgA",
+          "thumbnailUrl": "https://img.youtube.com/vi/1CjxfIi2DgA/hqdefault.jpg",
+          "credit": "Spike Chunsoft on YouTube"
+        }
+      ]
+    },
+    {
+      "slug": "king-of-colosseum-red",
+      "title": "King of Colosseum Red",
+      "series": "King of Colosseum",
+      "significance": "Its wrestlers can be carried into Green and combined for a much larger roster.",
+      "history": "The Red disc focuses on New Japan, All Japan and Pancrase, and features 96 characters alongside a trial-mode progression system.",
+      "features": "Trial mode has season-like progression and unlockable wrestlers, rings and championships. The Red disc emphasizes NJPW, AJPW and Pancrase.",
+      "japanOnly": true,
+      "videos": [
+        {
+          "title": "King of Colosseum Red footage (series retrospective, Red segment)",
+          "sourceUrl": "https://www.youtube.com/watch?v=yEza3Zsltb0&t=8s",
+          "thumbnailUrl": "https://img.youtube.com/vi/yEza3Zsltb0/hqdefault.jpg",
+          "credit": "Jumpers 1998 / YouTube"
+        }
+      ],
+      "launchBoxId": "163524-king-of-colosseum-shin-nippon-x-zen-nippon-x-pancrase"
+    },
+    {
+      "slug": "king-of-colosseum-green",
+      "title": "King of Colosseum Green",
+      "series": "King of Colosseum",
+      "significance": "A complementary companion disc that expands the promotions and gameplay options of Red.",
+      "history": "The Green disc centers on NOAH and Zero-One and adds 58 wrestlers; combined Red/Green save content can reach 154 characters.",
+      "features": "NOAH and Zero-One headline this disc. Its Trial mode unlocks more wrestlers, edits, championships and other content.",
+      "japanOnly": true,
+      "videos": [
+        {
+          "title": "King of Colosseum Green footage (series retrospective, Green segment)",
+          "sourceUrl": "https://www.youtube.com/watch?v=yEza3Zsltb0&t=70s",
+          "thumbnailUrl": "https://img.youtube.com/vi/yEza3Zsltb0/hqdefault.jpg",
+          "credit": "Jumpers 1998 / YouTube"
+        }
+      ],
+      "launchBoxId": "163525-king-of-colosseum-noah-x-zero-one"
+    },
+    {
+      "slug": "king-of-colosseum-ii",
+      "title": "King of Colosseum II",
+      "series": "King of Colosseum",
+      "significance": "The single-disc sequel expands the roster and adds a dedicated Match Maker booking mode.",
+      "history": "The later sequel brings the Japanese wrestling simulation branch together in one PlayStation 2 game, with more than 160 licensed wrestlers.",
+      "features": "Match Maker lets players book promotion matches. Exhibition, Survival Road, Title Match, Series, Edit and Dojo modes offer additional career and match options.",
+      "japanOnly": true,
+      "videos": [
+        {
+          "title": "King of Colosseum II gameplay (PS2)",
+          "sourceUrl": "https://www.youtube.com/watch?v=X_cSWArORrc",
+          "thumbnailUrl": "https://img.youtube.com/vi/X_cSWArORrc/hqdefault.jpg",
+          "credit": "Rev / YouTube"
+        }
+      ]
+    },
+    {
+      "slug": "fire-pro-joshi-all-star-dream-slam",
+      "title": "Fire Pro Joshi: All-Star Dream Slam",
+      "series": "Fire Pro Joshi",
+      "significance": "A full joshi-focused sibling rather than a reskin of the main Fire Pro roster.",
+      "history": "Released July 22, 1994, this women's wrestling entry focuses on the stars and rivalries of Japan's joshi promotions. It takes Fire Pro's deliberate grappling rhythm into a dedicated all-women roster rather than treating women's wrestling as a small addition to the main game.",
+      "japanOnly": true
+    },
+    {
+      "slug": "fire-pro-gaiden-blazing-tornado",
+      "title": "Fire Pro Gaiden: Blazing Tornado",
+      "series": "Fire Pro Gaiden",
+      "significance": "The arcade cousin of Fire Pro—and a bridge to Super Fire Pro Wrestling X.",
+      "history": "The faster, more arcade-oriented branch of Human Entertainment's wrestling family debuted in arcades on August 25, 1994, with distinctive fictional wrestlers and a more colorful presentation. Several of its wrestlers later appeared as recognizable crossovers in Fire Pro Wrestling X.",
+      "japanOnly": true,
+      "launchBoxId": "27163-blazing-tornado"
+    },
+    {
+      "slug": "super-fire-pro-wrestling-queen-s-special",
+      "title": "Super Fire Pro Wrestling: Queen's Special",
+      "series": "Fire Pro Joshi",
+      "significance": "A distinctly women-focused late-16-bit entry from the creators of Fire Pro.",
+      "history": "Released June 30, 1995, Queen's Special expanded Human's focus on Japanese women's professional wrestling. Its separate joshi-centered identity makes it an important part of the Fire Pro family alongside the better-known mixed and men's rosters.",
+      "japanOnly": true
+    },
+    {
+      "slug": "virtual-pro-wrestling-2",
+      "japanOnly": true,
+      "launchBoxId": "31028-virtual-pro-wrestling-2-oudou-keishou"
+    },
+    {
+      "slug": "wcw-nwo-revenge",
+      "launchBoxId": "1203-wcwnwo-revenge"
+    },
+    {
+      "slug": "wcw-vs-the-world"
+    },
+    {
+      "slug": "power-move-pro-wrestling",
+      "japanOnly": true
+    },
+    {
+      "slug": "thunder-pro-wrestling-retsuden",
+      "japanOnly": true
+    },
+    {
+      "slug": "rumble-roses"
+    },
+    {
+      "slug": "ecw-hardcore-revolution"
+    }
+  ]
+}
