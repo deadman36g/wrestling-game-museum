@@ -25,14 +25,6 @@
       "significance": "",
       "history": "",
       "features": "",
-      "boxArt": {
-        "url": "https://images.launchbox-app.com/3cfa0da7-a4ec-47b3-8e97-4e8251330e10.jpg",
-        "region": "Unknown",
-        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/34383-appoooh",
-        "credit": "LaunchBox Games Database",
-        "width": 480,
-        "height": 360
-      },
       "regional": [],
       "screenshots": [],
       "videos": [],
@@ -43,11 +35,6 @@
           "label": "The SmackDown Hotel game archive",
           "url": "https://www.thesmackdownhotel.com/games/appoooh",
           "facts": "Release date, platforms, developer, publisher, promotion, series"
-        },
-        {
-          "label": "LaunchBox Games Database (box art)",
-          "url": "https://gamesdb.launchbox-app.com/games/images/34383-appoooh",
-          "facts": "Appoooh - Fanart - Box - Front Image"
         }
       ]
     },
@@ -1445,14 +1432,6 @@
       "significance": "",
       "history": "",
       "features": "",
-      "boxArt": {
-        "url": "https://images.launchbox-app.com/a90b72b8-afc4-49c6-b1bc-c82d8b953a89.jpg",
-        "region": "Japan",
-        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/28958-zen-nihon-pro-wrestling-fight-da-pon",
-        "credit": "LaunchBox Games Database",
-        "width": 640,
-        "height": 1150
-      },
       "regional": [],
       "screenshots": [],
       "videos": [],
@@ -1463,11 +1442,6 @@
           "label": "The SmackDown Hotel game archive",
           "url": "https://www.thesmackdownhotel.com/games/zen-nippon-pro-wrestling",
           "facts": "Release date, platforms, developer, publisher, promotion, series"
-        },
-        {
-          "label": "LaunchBox Games Database (box art)",
-          "url": "https://gamesdb.launchbox-app.com/games/images/28958-zen-nihon-pro-wrestling-fight-da-pon",
-          "facts": "Zen-Nihon Pro Wrestling: Fight da Pon! - Box - Front Image (Japan)"
         }
       ]
     },
@@ -3557,14 +3531,6 @@
       "significance": "",
       "history": "",
       "features": "",
-      "boxArt": {
-        "url": "https://images.launchbox-app.com/bdbca591-d86e-4605-957b-35efea8f066a.jpg",
-        "region": "Japan",
-        "sourcePage": "https://gamesdb.launchbox-app.com/games/images/32038-pro-wrestling-sengokuden-2",
-        "credit": "LaunchBox Games Database",
-        "width": 1437,
-        "height": 1407
-      },
       "regional": [],
       "screenshots": [],
       "videos": [],
@@ -3575,11 +3541,6 @@
           "label": "The SmackDown Hotel game archive",
           "url": "https://www.thesmackdownhotel.com/games/the-pro-wrestling",
           "facts": "Release date, platforms, developer, publisher, promotion, series"
-        },
-        {
-          "label": "LaunchBox Games Database (box art)",
-          "url": "https://gamesdb.launchbox-app.com/games/images/32038-pro-wrestling-sengokuden-2",
-          "facts": "Pro Wrestling Sengokuden 2 - Box - Front Image (Japan)"
         }
       ]
     },

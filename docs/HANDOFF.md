@@ -1,13 +1,12 @@
 # Handoff — Wrestling Game Museum
 
-_Last updated: end of session 1 (2026-10-21)._ Branch: `claude/museum-build`.
+_Last updated: session 1, after the first full harvest (2026-10-21)._ Branch: `claude/museum-build`.
 
 ## State in one paragraph
-The solution is scaffolded and builds clean (0 warnings, 0 errors, `-p:EnableWindowsTargeting=true`); 50 tests pass.
-The WPF app has the museum index (slim toolbar, filter drawer, virtualised shelves of tiles) and the exhibit page
-(header card, regional releases, screenshots, videos, roster, sources). The harvester builds `data/games.json`
-from curated seed entries: **31 games, 29 with a LaunchBox box front**. This is **build-order step 1 complete**, and
-the harvester core of step 2 exists; the full game list (400–600 titles) has **not** been harvested yet.
+The solution builds clean (0 warnings, 0 errors, `-p:EnableWindowsTargeting=true`); 57 tests pass. The WPF app has the museum index
+and the exhibit page. `data/games.json` now holds **233 games harvested from the archive, 129 with a LaunchBox box front**
+(1984–2026). Build-order steps 1 and 2 are done as far as the archive goes; the catalog is probably still short of the real
+400–600 (see "Completeness").
 
 **Nothing has been seen on screen.** The cloud container cannot render WPF. XAML compiles and the markup tests pass,
 but layout, tile sizing, shadows, hover colours, virtualisation smoothness and fonts all need a visual check on the
@@ -19,6 +18,25 @@ owner's Windows PC (see "Needs a look" below). Do not assume any of it looks rig
   inputs are named, one `ToolbarBand` per view, tile spec values, Fire Pro Museum colour tokens present, MinWidth 900).
 - Harvester end to end against the live archives: facts from SmackDown Hotel pages, box fronts from LaunchBox,
   `data/games.json` written, contact sheet reviewed by eye (30 box fronts looked at; see decisions).
+
+## Harvest results (session 1)
+- `Harvester list` crawled 376 slugs (sitemap + `data/extra-slugs.txt` probes + links between game pages) → 235 game pages in
+  `data/slugs.txt`; 2 TBA pages (no release date) are excluded in `curation.json`. `Harvester build` runs over all of them.
+- Art matching: exact/close title (`TitleMatch`) AND a LaunchBox platform that matches one of the archive's (`PlatformMap`).
+  All 132 first-pass picks were reviewed on contact sheets: wrong/duplicated ones were removed (Zen-Nippon "Fight da Pon" for the
+  wrong archive entry, The Pro Wrestling), the "Appoooh" logo card was blocked, and 4 correct subtitle matches were pinned.
+  The later picks (126→129) were not re-viewed after pinning, but they are the same entries seen on the sheet.
+- 104 games have no box art: no LaunchBox entry on a matching platform (mostly mobile/PC management sims, Toukon Retsuden series,
+  Japanese titles filed under different names), or logo-only. `tools/out/art-report.json` lists the reason per game; pin with
+  `launchBoxId` in `data/curation.json`.
+- Titles come from the box image's alt text (the page `<title>` carries script junk on some pages).
+- Still only the 31 seed games have written significance/history; the other 202 show archive facts only (no invented text).
+
+## Completeness
+The archive's sitemap and link graph gave 235 pages; Wikipedia ("List of professional wrestling video games") and MobyGames are
+blocked from the cloud proxy, so the cross-check for missing titles and wrong dates has NOT been done. Run that from a machine that
+can reach them (or paste the lists) and add missing slugs/entries via `curation.json` (an entry with no archive page needs `title`,
+`platforms`, `releases` and `extraSources` set by hand — not yet supported for art search without an archive page).
 
 ## What is not verified
 - Anything visual or interactive in the WPF app (see list below).
@@ -75,9 +93,9 @@ owner's Windows PC (see "Needs a look" below). Do not assume any of it looks rig
 
 ## Next steps (in order)
 1. **Visual check** of the app on Windows (list above) and fix what is off.
-2. Harvester step 2: add a `list` command (sitemap → slugs, plus the index pagination/other sources) and let `build` run over *all* slugs, with
-   curation only as overrides; harvest by era in batches, contact-sheet review per batch, commit per batch. Add the Wikipedia/Moby cross-check
-   (from a network that allows it) and record disagreements in `sources`.
+2. Harvester: cross-check against Wikipedia/MobyGames (from a network that allows it), add missing titles, record disagreements in
+   `sources`; fix known archive errors (WrestleMania 2000 date/platform, VPW publisher — check the harvested records); pin art for the
+   104 games without a box; write stories for games as sources allow. Normalise platform names.
 3. Step 3 polish: image decode-size tuning, optional dark arena background image, debounce search, remember window size.
 4. Step 4: regional releases (`regional[]` with their own box thumbnails — model and view exist, no data yet), verified media, documented rosters
    (model/DataGrid exist; every game currently shows "Roster research in progress").
@@ -85,5 +103,5 @@ owner's Windows PC (see "Needs a look" below). Do not assume any of it looks rig
 
 ## Validation totals
 - `dotnet build -c Debug -p:EnableWindowsTargeting=true`: 0 warnings, 0 errors.
-- `dotnet test -p:EnableWindowsTargeting=true`: 50 passed, 0 failed.
-- `data/games.json`: 31 games, 29 with box art, every record has title, year, platform and at least one source.
+- `dotnet test -p:EnableWindowsTargeting=true`: 57 passed, 0 failed.
+- `data/games.json`: 233 games, 129 with box art, every record has title, year, platform and at least one source.

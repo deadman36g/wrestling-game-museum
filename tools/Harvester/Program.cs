@@ -96,7 +96,7 @@ async Task<(LaunchBoxResult?, BoxFront?, string)> FindArtAsync(CurationEntry c, 
         // Same-titled entries exist for several platforms: only those on one of the archive's platforms count.
         // Best first: exact title, then close title; within that, the archive's first-listed platform.
         var scored = results.Select(r => (r, rank: PlatformMap.Rank(platforms, r.Platform), match: TitleMatch.Score(r.Title, title, query)))
-                            .Where(x => x.rank >= 0 && x.match > 0).ToList();
+                            .Where(x => x.rank >= 0 && x.match >= 2).ToList();
         candidates = scored.OrderByDescending(x => x.match).ThenBy(x => x.rank).Select(x => x.r).ToList();
         if (candidates.Count == 0)
             return (null, null, "no title+platform match; candidates: " + string.Join(" | ", results.Take(5).Select(r => $"{r.Title} [{r.Platform}] {r.IdSlug}")));

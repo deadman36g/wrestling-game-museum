@@ -393,6 +393,26 @@
     {
       "slug": "ultra-pro-wrestling",
       "exclude": true
+    },
+    {
+      "slug": "appoooh",
+      "noBoxArtReason": "LaunchBox only has a logo card (no box scan)"
+    },
+    {
+      "slug": "online-pro-wrestling",
+      "launchBoxId": "389975-online-pro-wrestling-the-champion-of-the-network"
+    },
+    {
+      "slug": "galactic-wrestling-featuring-ultimate-muscle",
+      "launchBoxId": "77133-galactic-wrestling-featuring-ultimate-muscle-the-kinnikuman-legacy"
+    },
+    {
+      "slug": "wrestle-kingdom-2",
+      "launchBoxId": "150410-wrestle-kingdom-2-pro-wrestling-sekai-taisen"
+    },
+    {
+      "slug": "tna-impact",
+      "launchBoxId": "14156-tna-impact-total-nonstop-action-wrestling"
     }
   ]
 }
